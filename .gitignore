@@ -1,4 +1,5 @@
 .env
 psa_pop_deoxys.json
+ex_deoxys_full_report.json
 __pycache__/
 *.pyc
