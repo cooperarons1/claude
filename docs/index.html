@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX Deoxys - PSA Report Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">&#9733;</span>
+        <div>
+          <h1>EX Deoxys</h1>
+          <p class="subtitle">PSA Graded Price &amp; Population Report</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Stats bar -->
+    <section class="stats-bar" id="statsBar">
+      <div class="stat-card">
+        <div class="stat-value" id="statTotal">--</div>
+        <div class="stat-label">Total Cards</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statVariants">--</div>
+        <div class="stat-label">Variants</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statHolo">--</div>
+        <div class="stat-label">Holo / EX</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statReverse">--</div>
+        <div class="stat-label">Reverse Holos</div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="filter-row">
+        <input type="text" id="searchInput" class="filter-input" placeholder="Search by card name or number...">
+        <select id="rarityFilter" class="filter-select">
+          <option value="">All Rarities</option>
+          <option value="Common">Common</option>
+          <option value="Uncommon">Uncommon</option>
+          <option value="Rare">Rare</option>
+          <option value="Holo Rare">Holo Rare</option>
+          <option value="Rare Holo EX">Rare Holo EX</option>
+          <option value="Secret Rare">Secret Rare</option>
+        </select>
+        <select id="variantFilter" class="filter-select">
+          <option value="">All Variants</option>
+          <option value="Regular">Regular</option>
+          <option value="Holo">Holo</option>
+          <option value="Reverse Holo">Reverse Holo</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Loading state -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading card data...</p>
+    </div>
+
+    <!-- Data table -->
+    <section id="tableSection" class="table-section" style="display:none;">
+      <div class="table-wrap">
+        <table id="reportTable">
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>EX Deoxys Full Set Catalog &mdash; 111 Cards + Reverse Holos</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

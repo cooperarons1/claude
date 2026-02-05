@@ -1,0 +1,1250 @@
+[
+  {
+    "number": 1,
+    "name": "Baltoy",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 1,
+    "name": "Baltoy",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 2,
+    "name": "Carvanha",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 2,
+    "name": "Carvanha",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 3,
+    "name": "Corphish",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 3,
+    "name": "Corphish",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 4,
+    "name": "Electrike",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 4,
+    "name": "Electrike",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 5,
+    "name": "Gulpin",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 5,
+    "name": "Gulpin",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 6,
+    "name": "Lotad",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 6,
+    "name": "Lotad",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 7,
+    "name": "Makuhita",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 7,
+    "name": "Makuhita",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 8,
+    "name": "Mudkip",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 8,
+    "name": "Mudkip",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 9,
+    "name": "Numel",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 9,
+    "name": "Numel",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 10,
+    "name": "Pikachu",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 10,
+    "name": "Pikachu",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 11,
+    "name": "Poochyena",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 11,
+    "name": "Poochyena",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 12,
+    "name": "Ralts",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 12,
+    "name": "Ralts",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 13,
+    "name": "Shroomish",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 13,
+    "name": "Shroomish",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 14,
+    "name": "Slugma",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 14,
+    "name": "Slugma",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 15,
+    "name": "Spoink",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 15,
+    "name": "Spoink",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 16,
+    "name": "Taillow",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 16,
+    "name": "Taillow",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 17,
+    "name": "Zubat",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 17,
+    "name": "Zubat",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 18,
+    "name": "Breloom",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 18,
+    "name": "Breloom",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 19,
+    "name": "Cacturne",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 19,
+    "name": "Cacturne",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 20,
+    "name": "Claydol",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 20,
+    "name": "Claydol",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 21,
+    "name": "Combusken",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 21,
+    "name": "Combusken",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 22,
+    "name": "Crawdaunt",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 22,
+    "name": "Crawdaunt",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 23,
+    "name": "Gloom",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 23,
+    "name": "Gloom",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 24,
+    "name": "Golbat",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 24,
+    "name": "Golbat",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 25,
+    "name": "Golduck",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 25,
+    "name": "Golduck",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 26,
+    "name": "Grumpig",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 26,
+    "name": "Grumpig",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 27,
+    "name": "Hariyama",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 27,
+    "name": "Hariyama",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 28,
+    "name": "Kirlia",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 28,
+    "name": "Kirlia",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 29,
+    "name": "Lombre",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 29,
+    "name": "Lombre",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 30,
+    "name": "Manectric",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 30,
+    "name": "Manectric",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 31,
+    "name": "Marshtomp",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 31,
+    "name": "Marshtomp",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 32,
+    "name": "Mightyena",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 32,
+    "name": "Mightyena",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 33,
+    "name": "Minun",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 33,
+    "name": "Minun",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 34,
+    "name": "Ninjask",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 34,
+    "name": "Ninjask",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 35,
+    "name": "Plusle",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 35,
+    "name": "Plusle",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 36,
+    "name": "Shedinja",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 36,
+    "name": "Shedinja",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 37,
+    "name": "Shiftry",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 37,
+    "name": "Shiftry",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 38,
+    "name": "Silcoon",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 38,
+    "name": "Silcoon",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 39,
+    "name": "Swalot",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 39,
+    "name": "Swalot",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 40,
+    "name": "Swellow",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 40,
+    "name": "Swellow",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 41,
+    "name": "Tropius",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 41,
+    "name": "Tropius",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 42,
+    "name": "Volbeat",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 42,
+    "name": "Volbeat",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 43,
+    "name": "Altaria",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 43,
+    "name": "Altaria",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 44,
+    "name": "Beautifly",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 44,
+    "name": "Beautifly",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 45,
+    "name": "Blaziken",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 45,
+    "name": "Blaziken",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 46,
+    "name": "Camerupt",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 46,
+    "name": "Camerupt",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 47,
+    "name": "Gardevoir",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 47,
+    "name": "Gardevoir",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 48,
+    "name": "Gyarados",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 48,
+    "name": "Gyarados",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 49,
+    "name": "Jirachi",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 49,
+    "name": "Jirachi",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 50,
+    "name": "Ludicolo",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 50,
+    "name": "Ludicolo",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 51,
+    "name": "Lunatone",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 51,
+    "name": "Lunatone",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 52,
+    "name": "Magcargo",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 52,
+    "name": "Magcargo",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 53,
+    "name": "Mightyena",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 53,
+    "name": "Mightyena",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 54,
+    "name": "Nosepass",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 54,
+    "name": "Nosepass",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 55,
+    "name": "Raichu",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 55,
+    "name": "Raichu",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 56,
+    "name": "Salamence",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 56,
+    "name": "Salamence",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 57,
+    "name": "Sharpedo",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 57,
+    "name": "Sharpedo",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 58,
+    "name": "Solrock",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 58,
+    "name": "Solrock",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 59,
+    "name": "Starmie",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 59,
+    "name": "Starmie",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 60,
+    "name": "Swampert",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 60,
+    "name": "Swampert",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 61,
+    "name": "Vileplume",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 61,
+    "name": "Vileplume",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 62,
+    "name": "Altaria",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 62,
+    "name": "Altaria",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 63,
+    "name": "Beautifly",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 63,
+    "name": "Beautifly",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 64,
+    "name": "Crobat",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 64,
+    "name": "Crobat",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 65,
+    "name": "Dusclops",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 65,
+    "name": "Dusclops",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 66,
+    "name": "Gardevoir",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 66,
+    "name": "Gardevoir",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 67,
+    "name": "Gyarados",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 67,
+    "name": "Gyarados",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 68,
+    "name": "Ludicolo",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 68,
+    "name": "Ludicolo",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 69,
+    "name": "Metagross",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 69,
+    "name": "Metagross",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 70,
+    "name": "Salamence",
+    "rarity": "Holo Rare",
+    "variant": "Holo"
+  },
+  {
+    "number": 70,
+    "name": "Salamence",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 71,
+    "name": "Crobat ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 72,
+    "name": "Deoxys ex (Normal)",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 73,
+    "name": "Deoxys ex (Attack)",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 74,
+    "name": "Deoxys ex (Defense)",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 75,
+    "name": "Deoxys ex (Speed)",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 76,
+    "name": "Hariyama ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 77,
+    "name": "Manectric ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 78,
+    "name": "Rayquaza ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 79,
+    "name": "Salamence ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 80,
+    "name": "Sharpedo ex",
+    "rarity": "Rare Holo EX",
+    "variant": "Holo"
+  },
+  {
+    "number": 81,
+    "name": "Crystal Shard",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 81,
+    "name": "Crystal Shard",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 82,
+    "name": "Meteor Falls",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 82,
+    "name": "Meteor Falls",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 83,
+    "name": "Professor Birch",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 83,
+    "name": "Professor Birch",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 84,
+    "name": "Professor Cozmo's Discovery",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 84,
+    "name": "Professor Cozmo's Discovery",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 85,
+    "name": "Rare Candy",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 85,
+    "name": "Rare Candy",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 86,
+    "name": "Space Center",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 86,
+    "name": "Space Center",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 87,
+    "name": "Strength Charm",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 87,
+    "name": "Strength Charm",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 88,
+    "name": "Boost Energy",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 88,
+    "name": "Boost Energy",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 89,
+    "name": "Double Rainbow Energy",
+    "rarity": "Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 89,
+    "name": "Double Rainbow Energy",
+    "rarity": "Rare",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 90,
+    "name": "Scramble Energy",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 90,
+    "name": "Scramble Energy",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 91,
+    "name": "Cacnea",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 91,
+    "name": "Cacnea",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 92,
+    "name": "Duskull",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 92,
+    "name": "Duskull",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 93,
+    "name": "Magikarp",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 93,
+    "name": "Magikarp",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 94,
+    "name": "Nincada",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 94,
+    "name": "Nincada",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 95,
+    "name": "Oddish",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 95,
+    "name": "Oddish",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 96,
+    "name": "Psyduck",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 96,
+    "name": "Psyduck",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 97,
+    "name": "Seedot",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 97,
+    "name": "Seedot",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 98,
+    "name": "Staryu",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 98,
+    "name": "Staryu",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 99,
+    "name": "Swablu",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 99,
+    "name": "Swablu",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 100,
+    "name": "Torchic",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 100,
+    "name": "Torchic",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 101,
+    "name": "Bagon",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 101,
+    "name": "Bagon",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 102,
+    "name": "Beldum",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 102,
+    "name": "Beldum",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 103,
+    "name": "Metang",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 103,
+    "name": "Metang",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 104,
+    "name": "Shelgon",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 104,
+    "name": "Shelgon",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 105,
+    "name": "Wurmple",
+    "rarity": "Common",
+    "variant": "Regular"
+  },
+  {
+    "number": 105,
+    "name": "Wurmple",
+    "rarity": "Common",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 106,
+    "name": "Nuzleaf",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 106,
+    "name": "Nuzleaf",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 107,
+    "name": "Dusclops",
+    "rarity": "Uncommon",
+    "variant": "Regular"
+  },
+  {
+    "number": 107,
+    "name": "Dusclops",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo"
+  },
+  {
+    "number": 108,
+    "name": "Latias Gold Star",
+    "rarity": "Secret Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 109,
+    "name": "Latios Gold Star",
+    "rarity": "Secret Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 110,
+    "name": "Rayquaza Gold Star",
+    "rarity": "Secret Rare",
+    "variant": "Regular"
+  },
+  {
+    "number": 111,
+    "name": "Rocket's Raikou ex",
+    "rarity": "Secret Rare",
+    "variant": "Regular"
+  }
+]
