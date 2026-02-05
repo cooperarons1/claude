@@ -39,6 +39,7 @@ def psa_api_request(endpoint, token):
     req = urllib.request.Request(url)
     req.add_header("Authorization", f"bearer {token}")
     req.add_header("Accept", "application/json")
+    req.add_header("User-Agent", "Mozilla/5.0")
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:

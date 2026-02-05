@@ -44,6 +44,7 @@ def api_request(endpoint, api_key, params=None):
     req = urllib.request.Request(url)
     req.add_header("X-API-Key", api_key)
     req.add_header("Accept", "application/json")
+    req.add_header("User-Agent", "Mozilla/5.0")
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:

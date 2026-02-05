@@ -1,209 +1,113 @@
-Card #,Card Name,Rarity,Variant,PSA 1,PSA 2,PSA 3,PSA 4,PSA 5,PSA 6,PSA 7,PSA 8,PSA 9,PSA 10
-1,Baltoy,Common,Regular,,,,,,,,,,
-1,Baltoy,Common,Reverse Holo,,,,,,,,,,
-2,Carvanha,Common,Regular,,,,,,,,,,
-2,Carvanha,Common,Reverse Holo,,,,,,,,,,
-3,Corphish,Common,Regular,,,,,,,,,,
-3,Corphish,Common,Reverse Holo,,,,,,,,,,
-4,Electrike,Common,Regular,,,,,,,,,,
-4,Electrike,Common,Reverse Holo,,,,,,,,,,
-5,Gulpin,Common,Regular,,,,,,,,,,
-5,Gulpin,Common,Reverse Holo,,,,,,,,,,
-6,Lotad,Common,Regular,,,,,,,,,,
-6,Lotad,Common,Reverse Holo,,,,,,,,,,
-7,Makuhita,Common,Regular,,,,,,,,,,
-7,Makuhita,Common,Reverse Holo,,,,,,,,,,
-8,Mudkip,Common,Regular,,,,,,,,,,
-8,Mudkip,Common,Reverse Holo,,,,,,,,,,
-9,Numel,Common,Regular,,,,,,,,,,
-9,Numel,Common,Reverse Holo,,,,,,,,,,
-10,Pikachu,Common,Regular,,,,,,,,,,
-10,Pikachu,Common,Reverse Holo,,,,,,,,,,
-11,Poochyena,Common,Regular,,,,,,,,,,
-11,Poochyena,Common,Reverse Holo,,,,,,,,,,
-12,Ralts,Common,Regular,,,,,,,,,,
-12,Ralts,Common,Reverse Holo,,,,,,,,,,
-13,Shroomish,Common,Regular,,,,,,,,,,
-13,Shroomish,Common,Reverse Holo,,,,,,,,,,
-14,Slugma,Common,Regular,,,,,,,,,,
-14,Slugma,Common,Reverse Holo,,,,,,,,,,
-15,Spoink,Common,Regular,,,,,,,,,,
-15,Spoink,Common,Reverse Holo,,,,,,,,,,
-16,Taillow,Common,Regular,,,,,,,,,,
-16,Taillow,Common,Reverse Holo,,,,,,,,,,
-17,Zubat,Common,Regular,,,,,,,,,,
-17,Zubat,Common,Reverse Holo,,,,,,,,,,
-18,Breloom,Uncommon,Regular,,,,,,,,,,
-18,Breloom,Uncommon,Reverse Holo,,,,,,,,,,
-19,Cacturne,Uncommon,Regular,,,,,,,,,,
-19,Cacturne,Uncommon,Reverse Holo,,,,,,,,,,
-20,Claydol,Uncommon,Regular,,,,,,,,,,
-20,Claydol,Uncommon,Reverse Holo,,,,,,,,,,
-21,Combusken,Uncommon,Regular,,,,,,,,,,
-21,Combusken,Uncommon,Reverse Holo,,,,,,,,,,
-22,Crawdaunt,Uncommon,Regular,,,,,,,,,,
-22,Crawdaunt,Uncommon,Reverse Holo,,,,,,,,,,
-23,Gloom,Uncommon,Regular,,,,,,,,,,
-23,Gloom,Uncommon,Reverse Holo,,,,,,,,,,
-24,Golbat,Uncommon,Regular,,,,,,,,,,
-24,Golbat,Uncommon,Reverse Holo,,,,,,,,,,
-25,Golduck,Uncommon,Regular,,,,,,,,,,
-25,Golduck,Uncommon,Reverse Holo,,,,,,,,,,
-26,Grumpig,Uncommon,Regular,,,,,,,,,,
-26,Grumpig,Uncommon,Reverse Holo,,,,,,,,,,
-27,Hariyama,Uncommon,Regular,,,,,,,,,,
-27,Hariyama,Uncommon,Reverse Holo,,,,,,,,,,
-28,Kirlia,Uncommon,Regular,,,,,,,,,,
-28,Kirlia,Uncommon,Reverse Holo,,,,,,,,,,
-29,Lombre,Uncommon,Regular,,,,,,,,,,
-29,Lombre,Uncommon,Reverse Holo,,,,,,,,,,
-30,Manectric,Uncommon,Regular,,,,,,,,,,
-30,Manectric,Uncommon,Reverse Holo,,,,,,,,,,
-31,Marshtomp,Uncommon,Regular,,,,,,,,,,
-31,Marshtomp,Uncommon,Reverse Holo,,,,,,,,,,
-32,Mightyena,Uncommon,Regular,,,,,,,,,,
-32,Mightyena,Uncommon,Reverse Holo,,,,,,,,,,
-33,Minun,Uncommon,Regular,,,,,,,,,,
-33,Minun,Uncommon,Reverse Holo,,,,,,,,,,
-34,Ninjask,Uncommon,Regular,,,,,,,,,,
-34,Ninjask,Uncommon,Reverse Holo,,,,,,,,,,
-35,Plusle,Uncommon,Regular,,,,,,,,,,
-35,Plusle,Uncommon,Reverse Holo,,,,,,,,,,
-36,Shedinja,Uncommon,Regular,,,,,,,,,,
-36,Shedinja,Uncommon,Reverse Holo,,,,,,,,,,
-37,Shiftry,Uncommon,Regular,,,,,,,,,,
-37,Shiftry,Uncommon,Reverse Holo,,,,,,,,,,
-38,Silcoon,Uncommon,Regular,,,,,,,,,,
-38,Silcoon,Uncommon,Reverse Holo,,,,,,,,,,
-39,Swalot,Uncommon,Regular,,,,,,,,,,
-39,Swalot,Uncommon,Reverse Holo,,,,,,,,,,
-40,Swellow,Uncommon,Regular,,,,,,,,,,
-40,Swellow,Uncommon,Reverse Holo,,,,,,,,,,
-41,Tropius,Uncommon,Regular,,,,,,,,,,
-41,Tropius,Uncommon,Reverse Holo,,,,,,,,,,
-42,Volbeat,Uncommon,Regular,,,,,,,,,,
-42,Volbeat,Uncommon,Reverse Holo,,,,,,,,,,
-43,Altaria,Rare,Regular,,,,,,,,,,
-43,Altaria,Rare,Reverse Holo,,,,,,,,,,
-44,Beautifly,Rare,Regular,,,,,,,,,,
-44,Beautifly,Rare,Reverse Holo,,,,,,,,,,
-45,Blaziken,Rare,Regular,,,,,,,,,,
-45,Blaziken,Rare,Reverse Holo,,,,,,,,,,
-46,Camerupt,Rare,Regular,,,,,,,,,,
-46,Camerupt,Rare,Reverse Holo,,,,,,,,,,
-47,Gardevoir,Rare,Regular,,,,,,,,,,
-47,Gardevoir,Rare,Reverse Holo,,,,,,,,,,
-48,Gyarados,Rare,Regular,,,,,,,,,,
-48,Gyarados,Rare,Reverse Holo,,,,,,,,,,
-49,Jirachi,Rare,Regular,,,,,,,,,,
-49,Jirachi,Rare,Reverse Holo,,,,,,,,,,
-50,Ludicolo,Rare,Regular,,,,,,,,,,
-50,Ludicolo,Rare,Reverse Holo,,,,,,,,,,
-51,Lunatone,Rare,Regular,,,,,,,,,,
-51,Lunatone,Rare,Reverse Holo,,,,,,,,,,
-52,Magcargo,Rare,Regular,,,,,,,,,,
-52,Magcargo,Rare,Reverse Holo,,,,,,,,,,
-53,Mightyena,Rare,Regular,,,,,,,,,,
-53,Mightyena,Rare,Reverse Holo,,,,,,,,,,
-54,Nosepass,Rare,Regular,,,,,,,,,,
-54,Nosepass,Rare,Reverse Holo,,,,,,,,,,
-55,Raichu,Rare,Regular,,,,,,,,,,
-55,Raichu,Rare,Reverse Holo,,,,,,,,,,
-56,Salamence,Rare,Regular,,,,,,,,,,
-56,Salamence,Rare,Reverse Holo,,,,,,,,,,
-57,Sharpedo,Rare,Regular,,,,,,,,,,
-57,Sharpedo,Rare,Reverse Holo,,,,,,,,,,
-58,Solrock,Rare,Regular,,,,,,,,,,
-58,Solrock,Rare,Reverse Holo,,,,,,,,,,
-59,Starmie,Rare,Regular,,,,,,,,,,
-59,Starmie,Rare,Reverse Holo,,,,,,,,,,
-60,Swampert,Rare,Regular,,,,,,,,,,
-60,Swampert,Rare,Reverse Holo,,,,,,,,,,
-61,Vileplume,Rare,Regular,,,,,,,,,,
-61,Vileplume,Rare,Reverse Holo,,,,,,,,,,
-62,Altaria,Holo Rare,Holo,,,,,,,,,,
-62,Altaria,Holo Rare,Reverse Holo,,,,,,,,,,
-63,Beautifly,Holo Rare,Holo,,,,,,,,,,
-63,Beautifly,Holo Rare,Reverse Holo,,,,,,,,,,
-64,Crobat,Holo Rare,Holo,,,,,,,,,,
-64,Crobat,Holo Rare,Reverse Holo,,,,,,,,,,
-65,Dusclops,Holo Rare,Holo,,,,,,,,,,
-65,Dusclops,Holo Rare,Reverse Holo,,,,,,,,,,
-66,Gardevoir,Holo Rare,Holo,,,,,,,,,,
-66,Gardevoir,Holo Rare,Reverse Holo,,,,,,,,,,
-67,Gyarados,Holo Rare,Holo,,,,,,,,,,
-67,Gyarados,Holo Rare,Reverse Holo,,,,,,,,,,
-68,Ludicolo,Holo Rare,Holo,,,,,,,,,,
-68,Ludicolo,Holo Rare,Reverse Holo,,,,,,,,,,
-69,Metagross,Holo Rare,Holo,,,,,,,,,,
-69,Metagross,Holo Rare,Reverse Holo,,,,,,,,,,
-70,Salamence,Holo Rare,Holo,,,,,,,,,,
-70,Salamence,Holo Rare,Reverse Holo,,,,,,,,,,
-71,Crobat ex,Rare Holo EX,Holo,,,,,,,,,,
-72,Deoxys ex (Normal),Rare Holo EX,Holo,,,,,,,,,,
-73,Deoxys ex (Attack),Rare Holo EX,Holo,,,,,,,,,,
-74,Deoxys ex (Defense),Rare Holo EX,Holo,,,,,,,,,,
-75,Deoxys ex (Speed),Rare Holo EX,Holo,,,,,,,,,,
-76,Hariyama ex,Rare Holo EX,Holo,,,,,,,,,,
-77,Manectric ex,Rare Holo EX,Holo,,,,,,,,,,
-78,Rayquaza ex,Rare Holo EX,Holo,,,,,,,,,,
-79,Salamence ex,Rare Holo EX,Holo,,,,,,,,,,
-80,Sharpedo ex,Rare Holo EX,Holo,,,,,,,,,,
-81,Crystal Shard,Uncommon,Regular,,,,,,,,,,
-81,Crystal Shard,Uncommon,Reverse Holo,,,,,,,,,,
-82,Meteor Falls,Uncommon,Regular,,,,,,,,,,
-82,Meteor Falls,Uncommon,Reverse Holo,,,,,,,,,,
-83,Professor Birch,Uncommon,Regular,,,,,,,,,,
-83,Professor Birch,Uncommon,Reverse Holo,,,,,,,,,,
-84,Professor Cozmo's Discovery,Uncommon,Regular,,,,,,,,,,
-84,Professor Cozmo's Discovery,Uncommon,Reverse Holo,,,,,,,,,,
-85,Rare Candy,Uncommon,Regular,,,,,,,,,,
-85,Rare Candy,Uncommon,Reverse Holo,,,,,,,,,,
-86,Space Center,Uncommon,Regular,,,,,,,,,,
-86,Space Center,Uncommon,Reverse Holo,,,,,,,,,,
-87,Strength Charm,Uncommon,Regular,,,,,,,,,,
-87,Strength Charm,Uncommon,Reverse Holo,,,,,,,,,,
-88,Boost Energy,Uncommon,Regular,,,,,,,,,,
-88,Boost Energy,Uncommon,Reverse Holo,,,,,,,,,,
-89,Double Rainbow Energy,Rare,Regular,,,,,,,,,,
-89,Double Rainbow Energy,Rare,Reverse Holo,,,,,,,,,,
-90,Scramble Energy,Uncommon,Regular,,,,,,,,,,
-90,Scramble Energy,Uncommon,Reverse Holo,,,,,,,,,,
-91,Cacnea,Common,Regular,,,,,,,,,,
-91,Cacnea,Common,Reverse Holo,,,,,,,,,,
-92,Duskull,Common,Regular,,,,,,,,,,
-92,Duskull,Common,Reverse Holo,,,,,,,,,,
-93,Magikarp,Common,Regular,,,,,,,,,,
-93,Magikarp,Common,Reverse Holo,,,,,,,,,,
-94,Nincada,Common,Regular,,,,,,,,,,
-94,Nincada,Common,Reverse Holo,,,,,,,,,,
-95,Oddish,Common,Regular,,,,,,,,,,
-95,Oddish,Common,Reverse Holo,,,,,,,,,,
-96,Psyduck,Common,Regular,,,,,,,,,,
-96,Psyduck,Common,Reverse Holo,,,,,,,,,,
-97,Seedot,Common,Regular,,,,,,,,,,
-97,Seedot,Common,Reverse Holo,,,,,,,,,,
-98,Staryu,Common,Regular,,,,,,,,,,
-98,Staryu,Common,Reverse Holo,,,,,,,,,,
-99,Swablu,Common,Regular,,,,,,,,,,
-99,Swablu,Common,Reverse Holo,,,,,,,,,,
-100,Torchic,Common,Regular,,,,,,,,,,
-100,Torchic,Common,Reverse Holo,,,,,,,,,,
-101,Bagon,Common,Regular,,,,,,,,,,
-101,Bagon,Common,Reverse Holo,,,,,,,,,,
-102,Beldum,Common,Regular,,,,,,,,,,
-102,Beldum,Common,Reverse Holo,,,,,,,,,,
-103,Metang,Uncommon,Regular,,,,,,,,,,
-103,Metang,Uncommon,Reverse Holo,,,,,,,,,,
-104,Shelgon,Uncommon,Regular,,,,,,,,,,
-104,Shelgon,Uncommon,Reverse Holo,,,,,,,,,,
-105,Wurmple,Common,Regular,,,,,,,,,,
-105,Wurmple,Common,Reverse Holo,,,,,,,,,,
-106,Nuzleaf,Uncommon,Regular,,,,,,,,,,
-106,Nuzleaf,Uncommon,Reverse Holo,,,,,,,,,,
-107,Dusclops,Uncommon,Regular,,,,,,,,,,
-107,Dusclops,Uncommon,Reverse Holo,,,,,,,,,,
-108,Latias Gold Star,Secret Rare,Regular,,,,,,,,,,
-109,Latios Gold Star,Secret Rare,Regular,,,,,,,,,,
-110,Rayquaza Gold Star,Secret Rare,Regular,,,,,,,,,,
-111,Rocket's Raikou ex,Secret Rare,Regular,,,,,,,,,,
+Card #,Card Name,Rarity,Card Number,PSA 1,PSA 2,PSA 3,PSA 4,PSA 5,PSA 6,PSA 7,PSA 8,PSA 9,PSA 10,Raw NM Avg
+1,Altaria,Holo Rare,1/107,$79.99,,$4.31,$5.50,$24.99,$25.00,$24.95,$38.00,$200.00,$635.00,$20.00
+2,Beautifly,Holo Rare,2/107,,,,,$0.99,$19.99,$19.59,$50.00,$46.30,$285.00,$9.31
+3,Breloom,Holo Rare,3/107,$35.00,,$125.00,,,$32.00,$29.99,$27.00,$31.00,$412.49,$38.00
+4,Camerupt,Holo Rare,4/107,,,,$12.00,,$9.95,$14.99,$45.00,$104.37,$249.99,$11.49
+5,Claydol,Holo Rare,5/107,,,,,$20.00,$23.95,$15.99,$16.00,$34.99,$299.10,$9.99
+6,Crawdaunt,Holo Rare,6/107,$59.99,,,,,$25.00,$20.50,$13.50,$76.00,$499.99,$18.36
+7,Dusclops,Holo Rare,7/107,$44.00,,,,$19.50,$9.99,$23.50,$39.99,$49.99,$325.00,$9.99
+8,Gyarados,Holo Rare,8/107,$61.01,$21.01,$50.00,$65.00,$37.50,$61.00,$190.00,$150.00,$999.00,$4850.00,$44.81
+9,Jirachi,Holo Rare,9/107,$145.00,,$50.00,$37.00,$61.40,$45.00,$60.00,$248.98,$482.00,$859.05,$19.99
+10,Ludicolo,Holo Rare,10/107,,,,,$16.33,,$10.50,$29.99,$65.00,$163.50,$9.99
+11,Metagross,Holo Rare,11/107,$95.00,,$36.00,,$70.00,$8.00,$17.50,$120.00,$89.00,$616.00,$20.51
+12,Mightyena,Holo Rare,12/107,,,,$18.16,$19.99,$8.50,$19.99,$27.00,$51.00,$662.00,$21.85
+13,Ninjask,Holo Rare,13/107,,,,,$4.25,$19.99,$10.50,$34.99,$26.63,$275.00,$16.95
+14,Shedinja,Holo Rare,14/107,,,,,$11.10,$28.60,$29.99,$49.99,$99.99,$649.55,$5.46
+15,Slaking,Holo Rare,15/107,$24.99,,,$4.25,,$25.94,$27.37,$23.59,$35.00,$200.00,$19.00
+16,Deoxys (Normal Forme),Rare,16/107,$110.00,,,,$20.50,$65.00,$104.19,$70.71,$511.51,$2137.50,$57.49
+17,Deoxys (Attack Forme),Rare,17/107,$101.00,$29.99,$34.14,$66.00,$47.00,$270.00,$148.50,$260.00,$622.00,$113.56,$8.65
+18,Deoxys (Defense Forme),Rare,18/107,$99.99,,,,$44.00,$101.24,$45.99,$29.00,$312.00,$150.00,$5.74
+19,Ludicolo,Rare,19/107,,,,,,,,$62.95,$44.65,$555.00,$12.00
+20,Magcargo,Rare,20/107,,$11.50,,,,$8.26,$20.00,$47.94,$43.00,$599.99,$3.99
+21,Pelipper,Rare,21/107,$4.25,,,,$17.29,,$10.00,$49.95,$56.00,$20.50,$1.49
+22,Rayquaza,Rare,22/107,$65.00,,$13.00,$89.99,$49.50,$120.18,$350.00,$416.50,$810.00,$300.00,$389.79
+23,Sableye,Rare,23/107,$219.99,,,$139.50,$13.50,$368.56,$402.11,$401.00,$1070.00,$1111.00,$4.68
+24,Seaking,Rare,24/107,,,,,,,$24.99,$15.00,$65.00,$33.95,$15.95
+25,Shiftry,Rare,25/107,,,,,$25.21,,$12.50,$30.00,$19.97,$105.50,$19.99
+26,Skarmory,Rare,26/107,,,,,,$19.81,,$24.99,$22.50,$406.88,$45.56
+27,Tropius,Rare,27/107,,,,,,$8.60,$18.00,$9.50,$16.50,$475.00,$19.99
+28,Whiscash,Rare,28/107,,,,$12.50,,$14.95,,$33.00,$15.51,$200.00,$18.95
+29,Xatu,Rare,29/107,,,,,,$20.00,$31.00,$9.02,$70.00,$59.97,$26.17
+30,Donphan,Uncommon,30/107,,,,,,,$10.50,$18.50,$37.77,$475.00,$22.03
+31,Golbat,Uncommon,31/107,,,,,$12.50,$19.65,,$9.95,$55.00,$266.00,$14.50
+32,Grumpig,Uncommon,32/107,,,,,,$20.00,$7.52,$3.25,$8.52,$22.50,$4.95
+33,Lombre,Uncommon,33/107,,,,,,,$7.52,,$12.50,$52.82,$12.37
+34,Lombre,Uncommon,34/107,,,,,,,,$18.99,$16.00,$51.00,$8.96
+35,Lotad,Uncommon,35/107,,,,,,,$17.50,$14.99,$19.99,$449.99,$1.93
+36,Lunatone,Uncommon,36/107,,,,,,$29.99,,$24.99,$42.00,$50.00,$13.95
+37,Magcargo,Uncommon,37/107,,,,,$1.50,$11.99,,$29.99,$28.75,$112.50,$1.99
+38,Manectric,Uncommon,38/107,,,,,,$5.50,$18.02,$31.00,$109.99,$113.50,$2.95
+39,Masquerain,Uncommon,39/107,,,,,,,,$19.95,$33.71,,$0.99
+40,Metang,Uncommon,40/107,,,,,,,$19.99,$20.00,$15.50,$349.99,$27.95
+41,Minun,Uncommon,41/107,,,,,,$30.00,$29.99,$9.99,$52.00,$235.00,$9.28
+42,Nosepass,Uncommon,42/107,,,,,$16.50,$19.99,$19.99,$26.00,$41.00,$300.00,$9.99
+43,Nuzleaf,Uncommon,43/107,,,,$9.01,,$5.50,$16.43,$14.05,$29.99,$36.10,$0.99
+44,Plusle,Uncommon,44/107,,,,$16.50,,,$29.99,$66.00,$99.00,$254.99,$13.68
+45,Shelgon,Uncommon,45/107,,,,,,,$14.50,$30.00,$60.00,$77.00,$7.69
+46,Silcoon,Uncommon,46/107,,,,,,,,,$55.00,$214.99,$0.99
+47,Solrock,Uncommon,47/107,,,,,$23.57,,$10.50,$15.75,$13.50,$62.47,$4.09
+48,Starmie,Uncommon,48/107,,,,,,,$26.99,$60.00,$75.00,$47.99,$2.34
+49,Swellow,Uncommon,49/107,,,,,,,,$24.99,$18.27,$140.49,$12.06
+50,Vigoroth,Uncommon,50/107,,,,$5.00,,,,$10.50,$35.00,$275.00,$2.50
+51,Weezing,Uncommon,51/107,,,,,,$19.99,$12.50,$57.00,$65.00,$40.60,$15.00
+52,Bagon,Common,52/107,,,,,,$10.00,,,$65.00,$108.50,$14.99
+53,Baltoy,Common,53/107,,,,,,,,$16.00,$39.00,$235.00,$0.99
+54,Barboach,Common,54/107,,,,,,$10.50,,$20.50,$20.96,,$8.99
+55,Beldum,Common,55/107,,,,,$8.50,$24.99,,$26.00,$55.00,$244.25,$10.99
+56,Carvanha,Common,56/107,,,,,,,,$29.99,$70.00,$305.00,$2.99
+57,Corphish,Common,57/107,,,,,,$19.99,$22.50,$37.00,$46.00,$90.00,$0.99
+58,Duskull,Common,58/107,,,,,,$9.99,$34.00,$35.00,$36.00,$230.00,$20.52
+59,Electrike,Common,59/107,,,,,,,,$29.00,$33.00,$121.51,$1.90
+60,Electrike,Common,60/107,,,,,,$9.99,$20.50,$15.50,$55.00,$42.47,$12.50
+61,Goldeen,Common,61/107,,,,,,,$3.75,$11.50,$13.50,$179.99,$12.99
+62,Koffing,Common,62/107,,,,,,$3.50,,$19.50,$22.03,$39.97,$15.00
+63,Lotad,Common,63/107,,,,,,,,$27.00,$41.00,$595.00,$5.50
+64,Magikarp,Common,64/107,$50.00,,,,,$60.10,$56.00,$97.50,$227.50,$2000.00,$42.99
+65,Makuhita,Common,65/107,,,,,,,$7.92,$34.99,$55.00,$164.99,$10.54
+66,Natu,Common,66/107,,,,,,$23.53,,$37.95,$58.00,$227.50,$19.99
+67,Nincada,Common,67/107,,,,,,,$26.00,$10.50,$28.00,,$0.99
+68,Numel,Common,68/107,,,,,,$31.76,$15.99,$10.00,$46.00,$56.00,$11.50
+69,Phanpy,Common,69/107,,,,,,$5.50,,$15.50,$57.00,$179.15,$17.00
+70,Poochyena,Common,70/107,,,,,,$10.50,$34.99,$17.00,$50.60,$549.99,$7.50
+71,Seedot,Common,71/107,,,,,,,$7.63,$17.00,$55.00,$180.00,$0.99
+72,Shroomish,Common,72/107,$22.00,,,,,$19.67,,$25.00,$37.69,$225.00,$1.90
+73,Slakoth,Common,73/107,,,,,,,,$7.50,$55.00,$420.00,$2.75
+74,Slugma,Common,74/107,,,,,,,,$10.50,$108.07,$485.00,$3.44
+75,Slugma,Common,75/107,,,,,,,,$9.95,$29.99,$249.99,$10.99
+76,Spoink,Common,76/107,,,,,,,,$27.99,$17.00,$199.99,$11.95
+77,Staryu,Common,77/107,,,,,,$21.97,$21.00,$30.00,$55.00,$189.99,$9.99
+78,Surskit,Common,78/107,,,,,,,,$6.55,$13.50,$47.00,$0.99
+79,Swablu,Common,79/107,,,,,,,$6.50,$10.20,$22.50,$230.00,$1.99
+80,Taillow,Common,80/107,,,,,$6.50,$10.50,,$22.50,$51.00,$300.00,$9.99
+81,Wingull,Common,81/107,,,,,,,$5.50,$19.99,$45.00,$77.00,$11.75
+82,Wurmple,Common,82/107,,,,,,,$9.99,$14.99,$44.95,$215.00,$1.98
+83,Zubat,Common,83/107,,,,,,$11.61,$15.00,$25.00,$50.00,$349.99,$1.99
+84,Balloon Berry,Uncommon,84/107,,,,,,,,,,$36.10,$4.99
+85,Crystal Shard,Uncommon,85/107,,,,,,,,$10.51,$17.50,,$8.20
+86,Energy Charge,Uncommon,86/107,,,,,,,$14.50,$20.50,$22.99,$43.01,$1.99
+87,Lady Outing,Uncommon,87/107,,,,,,,,$17.50,$31.00,$248.88,$1.99
+88,Master Ball,Uncommon,88/107,,,,,,,$24.99,$19.99,$32.64,$150.00,$5.50
+89,Meteor Falls,Uncommon,89/107,,,,,,,,$18.50,$55.00,,$1.89
+90,Professor Cozmo's Discovery,Uncommon,90/107,,,,,,,,,$39.99,$99.00,$5.00
+91,Space Center,Uncommon,91/107,,,,,,$5.51,$45.01,$27.00,$40.00,$399.99,$4.00
+92,Strength Charm,Uncommon,92/107,,,,,,,$2.00,$26.00,$90.00,$67.00,$8.21
+93,Boost Energy,Uncommon,93/107,,,,,,,,,$8.52,$23.54,$2.96
+94,Heal Energy,Uncommon,94/107,,,,,,,,$13.50,$55.00,,$3.95
+95,Scramble Energy,Uncommon,95/107,,,,,$3.00,$24.99,$15.18,$11.50,$40.00,$52.00,$3.71
+96,Crobat ex,Ultra Rare,96/107,$70.00,,$29.99,$28.95,$49.99,$51.89,$70.00,$134.38,$272.00,$1200.00,$54.74
+97,Deoxys ex (Normal Forme),Ultra Rare,97/107,$140.00,$30.00,,$55.00,$100.00,$202.50,$160.00,$330.00,$860.01,$6495.00,$225.00
+98,Deoxys ex (Attack Forme),Ultra Rare,98/107,$99.99,$39.99,$19.99,$72.00,$101.00,$99.99,$153.50,$299.99,$392.63,$3550.00,$149.76
+99,Deoxys ex (Defense Forme),Ultra Rare,99/107,$71.00,,$36.00,$65.00,$75.00,$116.00,$150.00,$207.50,$550.00,$5888.00,$48.43
+100,Hariyama ex,Ultra Rare,100/107,,,,$51.21,$37.00,$33.16,$50.00,$86.00,$96.00,$1400.00,$49.99
+101,Manectric ex,Ultra Rare,101/107,$74.99,,,$8.52,$36.00,$49.99,$39.00,$100.00,$177.92,$550.00,$61.12
+102,Rayquaza ex,Ultra Rare,102/107,$92.00,$109.50,$120.00,$170.00,$280.00,$299.00,$405.00,$700.00,$1175.00,$8459.99,$185.00
+103,Salamence ex,Ultra Rare,103/107,$124.99,$90.00,$33.00,,$100.00,$117.50,$175.00,$325.00,$450.00,$2880.00,$163.50
+104,Sharpedo ex,Ultra Rare,104/107,$43.89,,,,$45.00,$49.00,$76.60,$111.46,$222.50,$799.10,$105.00
+105,Latias Star,Ultra Rare,105/107,$1225.00,$2030.00,$1725.00,$1865.60,$2600.00,$3650.00,$3605.00,$5000.00,$13000.00,$1135.00,$190.00
+106,Latios Star,Ultra Rare,106/107,$1534.00,$1030.00,$1275.00,$2035.00,$1705.00,$2100.00,$3100.00,$4325.00,$9500.00,$51100.00,$1140.56
+107,Rayquaza Star,Ultra Rare,107/107,$4000.00,$5150.00,$6750.00,$8300.00,$9000.00,$12500.00,$14900.00,$15000.00,$29000.00,$9897.94,$2500.99
+108,Rocket's Raikou ex,Secret Rare,108/107,$249.99,,$127.00,$149.95,$175.00,$183.50,$195.25,$260.00,$465.00,$4400.00,$230.00
+999,Deoxys Booster Pack,,,,,,,,,,,,,
+999,Deoxys Booster Box,,,,,,,,,,,,,
+999,"Deoxys Theme Deck - ""Starcharge""",,,,,,,,,,,,,
+999,"Deoxys Theme Deck - ""Jetstream""",,,,,,,,,,,,,

@@ -1,1250 +1,1674 @@
 [
   {
     "number": 1,
-    "name": "Baltoy",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 1,
-    "name": "Baltoy",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Altaria",
+    "rarity": "Holo Rare",
+    "card_number": "1/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 79.99,
+      "PSA 10": 635,
+      "PSA 3": 4.31,
+      "PSA 4": 5.5,
+      "PSA 5": 24.99,
+      "PSA 6": 25,
+      "PSA 7": 24.95,
+      "PSA 8": 38,
+      "PSA 9": 200
+    },
+    "raw_nm_avg": 20
   },
   {
     "number": 2,
-    "name": "Carvanha",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 2,
-    "name": "Carvanha",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Beautifly",
+    "rarity": "Holo Rare",
+    "card_number": "2/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 285,
+      "PSA 5": 0.99,
+      "PSA 6": 19.99,
+      "PSA 7": 19.59,
+      "PSA 8": 50,
+      "PSA 9": 46.3
+    },
+    "raw_nm_avg": 9.31
   },
   {
     "number": 3,
-    "name": "Corphish",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 3,
-    "name": "Corphish",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Breloom",
+    "rarity": "Holo Rare",
+    "card_number": "3/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 35,
+      "PSA 10": 412.49,
+      "PSA 3": 125,
+      "PSA 6": 32,
+      "PSA 7": 29.99,
+      "PSA 8": 27,
+      "PSA 9": 31
+    },
+    "raw_nm_avg": 38
   },
   {
     "number": 4,
-    "name": "Electrike",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 4,
-    "name": "Electrike",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Camerupt",
+    "rarity": "Holo Rare",
+    "card_number": "4/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 249.99,
+      "PSA 4": 12,
+      "PSA 6": 9.95,
+      "PSA 7": 14.99,
+      "PSA 8": 45,
+      "PSA 9": 104.37
+    },
+    "raw_nm_avg": 11.49
   },
   {
     "number": 5,
-    "name": "Gulpin",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 5,
-    "name": "Gulpin",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Claydol",
+    "rarity": "Holo Rare",
+    "card_number": "5/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 299.1,
+      "PSA 5": 20,
+      "PSA 6": 23.95,
+      "PSA 7": 15.99,
+      "PSA 8": 16,
+      "PSA 9": 34.99
+    },
+    "raw_nm_avg": 9.99
   },
   {
     "number": 6,
-    "name": "Lotad",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 6,
-    "name": "Lotad",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Crawdaunt",
+    "rarity": "Holo Rare",
+    "card_number": "6/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 59.99,
+      "PSA 10": 499.99,
+      "PSA 6": 25,
+      "PSA 7": 20.5,
+      "PSA 8": 13.5,
+      "PSA 9": 76
+    },
+    "raw_nm_avg": 18.36
   },
   {
     "number": 7,
-    "name": "Makuhita",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 7,
-    "name": "Makuhita",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Dusclops",
+    "rarity": "Holo Rare",
+    "card_number": "7/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 44,
+      "PSA 10": 325,
+      "PSA 5": 19.5,
+      "PSA 6": 9.99,
+      "PSA 7": 23.5,
+      "PSA 8": 39.99,
+      "PSA 9": 49.99
+    },
+    "raw_nm_avg": 9.99
   },
   {
     "number": 8,
-    "name": "Mudkip",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 8,
-    "name": "Mudkip",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Gyarados",
+    "rarity": "Holo Rare",
+    "card_number": "8/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 61.01,
+      "PSA 10": 4850,
+      "PSA 2": 21.01,
+      "PSA 3": 50,
+      "PSA 4": 65,
+      "PSA 5": 37.5,
+      "PSA 6": 61,
+      "PSA 7": 190,
+      "PSA 8": 150,
+      "PSA 9": 999
+    },
+    "raw_nm_avg": 44.81
   },
   {
     "number": 9,
-    "name": "Numel",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 9,
-    "name": "Numel",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Jirachi",
+    "rarity": "Holo Rare",
+    "card_number": "9/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 145.0,
+      "PSA 10": 859.05,
+      "PSA 3": 50,
+      "PSA 4": 37,
+      "PSA 5": 61.4,
+      "PSA 6": 45,
+      "PSA 7": 60,
+      "PSA 8": 248.98,
+      "PSA 9": 482
+    },
+    "raw_nm_avg": 19.99
   },
   {
     "number": 10,
-    "name": "Pikachu",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 10,
-    "name": "Pikachu",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Ludicolo",
+    "rarity": "Holo Rare",
+    "card_number": "10/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 163.5,
+      "PSA 5": 16.33,
+      "PSA 7": 10.5,
+      "PSA 8": 29.99,
+      "PSA 9": 65
+    },
+    "raw_nm_avg": 9.99
   },
   {
     "number": 11,
-    "name": "Poochyena",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 11,
-    "name": "Poochyena",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Metagross",
+    "rarity": "Holo Rare",
+    "card_number": "11/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 95,
+      "PSA 10": 616,
+      "PSA 3": 36,
+      "PSA 5": 70,
+      "PSA 6": 8,
+      "PSA 7": 17.5,
+      "PSA 8": 120,
+      "PSA 9": 89
+    },
+    "raw_nm_avg": 20.51
   },
   {
     "number": 12,
-    "name": "Ralts",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 12,
-    "name": "Ralts",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Mightyena",
+    "rarity": "Holo Rare",
+    "card_number": "12/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 662,
+      "PSA 4": 18.16,
+      "PSA 5": 19.99,
+      "PSA 6": 8.5,
+      "PSA 7": 19.99,
+      "PSA 8": 27,
+      "PSA 9": 51
+    },
+    "raw_nm_avg": 21.85
   },
   {
     "number": 13,
-    "name": "Shroomish",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 13,
-    "name": "Shroomish",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Ninjask",
+    "rarity": "Holo Rare",
+    "card_number": "13/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 275,
+      "PSA 5": 4.25,
+      "PSA 6": 19.99,
+      "PSA 7": 10.5,
+      "PSA 8": 34.99,
+      "PSA 9": 26.63
+    },
+    "raw_nm_avg": 16.95
   },
   {
     "number": 14,
-    "name": "Slugma",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 14,
-    "name": "Slugma",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Shedinja",
+    "rarity": "Holo Rare",
+    "card_number": "14/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 649.55,
+      "PSA 5": 11.1,
+      "PSA 6": 28.6,
+      "PSA 7": 29.99,
+      "PSA 8": 49.99,
+      "PSA 9": 99.99
+    },
+    "raw_nm_avg": 5.46
   },
   {
     "number": 15,
-    "name": "Spoink",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 15,
-    "name": "Spoink",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Slaking",
+    "rarity": "Holo Rare",
+    "card_number": "15/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 24.99,
+      "PSA 10": 200,
+      "PSA 4": 4.25,
+      "PSA 6": 25.94,
+      "PSA 7": 27.37,
+      "PSA 8": 23.59,
+      "PSA 9": 35
+    },
+    "raw_nm_avg": 19
   },
   {
     "number": 16,
-    "name": "Taillow",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 16,
-    "name": "Taillow",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Deoxys (Normal Forme)",
+    "rarity": "Rare",
+    "card_number": "16/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 110,
+      "PSA 10": 2137.5,
+      "PSA 5": 20.5,
+      "PSA 6": 65,
+      "PSA 7": 104.19,
+      "PSA 8": 70.71,
+      "PSA 9": 511.51
+    },
+    "raw_nm_avg": 57.49
   },
   {
     "number": 17,
-    "name": "Zubat",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 17,
-    "name": "Zubat",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Deoxys (Attack Forme)",
+    "rarity": "Rare",
+    "card_number": "17/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 101,
+      "PSA 10": 113.56,
+      "PSA 2": 29.99,
+      "PSA 3": 34.14,
+      "PSA 4": 66,
+      "PSA 5": 47,
+      "PSA 6": 270,
+      "PSA 7": 148.5,
+      "PSA 8": 260,
+      "PSA 9": 622
+    },
+    "raw_nm_avg": 8.65
   },
   {
     "number": 18,
-    "name": "Breloom",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 18,
-    "name": "Breloom",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Deoxys (Defense Forme)",
+    "rarity": "Rare",
+    "card_number": "18/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 99.99,
+      "PSA 10": 150,
+      "PSA 5": 44,
+      "PSA 6": 101.24,
+      "PSA 7": 45.99,
+      "PSA 8": 29,
+      "PSA 9": 312
+    },
+    "raw_nm_avg": 5.74
   },
   {
     "number": 19,
-    "name": "Cacturne",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 19,
-    "name": "Cacturne",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Ludicolo",
+    "rarity": "Rare",
+    "card_number": "19/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 555,
+      "PSA 8": 62.95,
+      "PSA 9": 44.65
+    },
+    "raw_nm_avg": 12
   },
   {
     "number": 20,
-    "name": "Claydol",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 20,
-    "name": "Claydol",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Magcargo",
+    "rarity": "Rare",
+    "card_number": "20/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 599.99,
+      "PSA 2": 11.5,
+      "PSA 6": 8.26,
+      "PSA 7": 20,
+      "PSA 8": 47.94,
+      "PSA 9": 43
+    },
+    "raw_nm_avg": 3.99
   },
   {
     "number": 21,
-    "name": "Combusken",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 21,
-    "name": "Combusken",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Pelipper",
+    "rarity": "Rare",
+    "card_number": "21/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 4.25,
+      "PSA 10": 20.5,
+      "PSA 5": 17.29,
+      "PSA 7": 10,
+      "PSA 8": 49.95,
+      "PSA 9": 56
+    },
+    "raw_nm_avg": 1.49
   },
   {
     "number": 22,
-    "name": "Crawdaunt",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 22,
-    "name": "Crawdaunt",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Rayquaza",
+    "rarity": "Rare",
+    "card_number": "22/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 65,
+      "PSA 10": 300,
+      "PSA 3": 13,
+      "PSA 4": 89.99,
+      "PSA 5": 49.5,
+      "PSA 6": 120.18,
+      "PSA 7": 350,
+      "PSA 8": 416.5,
+      "PSA 9": 810
+    },
+    "raw_nm_avg": 389.79
   },
   {
     "number": 23,
-    "name": "Gloom",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 23,
-    "name": "Gloom",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Sableye",
+    "rarity": "Rare",
+    "card_number": "23/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 219.99,
+      "PSA 10": 1111,
+      "PSA 4": 139.5,
+      "PSA 5": 13.5,
+      "PSA 6": 368.56,
+      "PSA 7": 402.11,
+      "PSA 8": 401,
+      "PSA 9": 1070
+    },
+    "raw_nm_avg": 4.68
   },
   {
     "number": 24,
-    "name": "Golbat",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 24,
-    "name": "Golbat",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Seaking",
+    "rarity": "Rare",
+    "card_number": "24/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 33.95,
+      "PSA 7": 24.99,
+      "PSA 8": 15,
+      "PSA 9": 65
+    },
+    "raw_nm_avg": 15.95
   },
   {
     "number": 25,
-    "name": "Golduck",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 25,
-    "name": "Golduck",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Shiftry",
+    "rarity": "Rare",
+    "card_number": "25/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 105.5,
+      "PSA 5": 25.21,
+      "PSA 7": 12.5,
+      "PSA 8": 30,
+      "PSA 9": 19.97
+    },
+    "raw_nm_avg": 19.99
   },
   {
     "number": 26,
-    "name": "Grumpig",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 26,
-    "name": "Grumpig",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Skarmory",
+    "rarity": "Rare",
+    "card_number": "26/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 406.88,
+      "PSA 6": 19.81,
+      "PSA 8": 24.99,
+      "PSA 9": 22.5
+    },
+    "raw_nm_avg": 45.56
   },
   {
     "number": 27,
-    "name": "Hariyama",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 27,
-    "name": "Hariyama",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Tropius",
+    "rarity": "Rare",
+    "card_number": "27/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 475,
+      "PSA 6": 8.6,
+      "PSA 7": 18,
+      "PSA 8": 9.5,
+      "PSA 9": 16.5
+    },
+    "raw_nm_avg": 19.99
   },
   {
     "number": 28,
-    "name": "Kirlia",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 28,
-    "name": "Kirlia",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Whiscash",
+    "rarity": "Rare",
+    "card_number": "28/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 200,
+      "PSA 4": 12.5,
+      "PSA 6": 14.95,
+      "PSA 8": 33,
+      "PSA 9": 15.51
+    },
+    "raw_nm_avg": 18.95
   },
   {
     "number": 29,
-    "name": "Lombre",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 29,
-    "name": "Lombre",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Xatu",
+    "rarity": "Rare",
+    "card_number": "29/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 59.97,
+      "PSA 6": 20,
+      "PSA 7": 31,
+      "PSA 8": 9.02,
+      "PSA 9": 70
+    },
+    "raw_nm_avg": 26.17
   },
   {
     "number": 30,
-    "name": "Manectric",
+    "name": "Donphan",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 30,
-    "name": "Manectric",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "30/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 475,
+      "PSA 7": 10.5,
+      "PSA 8": 18.5,
+      "PSA 9": 37.77
+    },
+    "raw_nm_avg": 22.03
   },
   {
     "number": 31,
-    "name": "Marshtomp",
+    "name": "Golbat",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 31,
-    "name": "Marshtomp",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "31/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 266,
+      "PSA 5": 12.5,
+      "PSA 6": 19.65,
+      "PSA 8": 9.95,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 14.5
   },
   {
     "number": 32,
-    "name": "Mightyena",
+    "name": "Grumpig",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 32,
-    "name": "Mightyena",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "32/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 22.5,
+      "PSA 6": 20,
+      "PSA 7": 7.52,
+      "PSA 8": 3.25,
+      "PSA 9": 8.52
+    },
+    "raw_nm_avg": 4.95
   },
   {
     "number": 33,
-    "name": "Minun",
+    "name": "Lombre",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 33,
-    "name": "Minun",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "33/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 52.82,
+      "PSA 7": 7.52,
+      "PSA 9": 12.5
+    },
+    "raw_nm_avg": 12.37
   },
   {
     "number": 34,
-    "name": "Ninjask",
+    "name": "Lombre",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 34,
-    "name": "Ninjask",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "34/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 51,
+      "PSA 8": 18.99,
+      "PSA 9": 16
+    },
+    "raw_nm_avg": 8.96
   },
   {
     "number": 35,
-    "name": "Plusle",
+    "name": "Lotad",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 35,
-    "name": "Plusle",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "35/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 449.99,
+      "PSA 7": 17.5,
+      "PSA 8": 14.99,
+      "PSA 9": 19.99
+    },
+    "raw_nm_avg": 1.925
   },
   {
     "number": 36,
-    "name": "Shedinja",
+    "name": "Lunatone",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 36,
-    "name": "Shedinja",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "36/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 50,
+      "PSA 6": 29.99,
+      "PSA 8": 24.99,
+      "PSA 9": 42
+    },
+    "raw_nm_avg": 13.95
   },
   {
     "number": 37,
-    "name": "Shiftry",
+    "name": "Magcargo",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 37,
-    "name": "Shiftry",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "37/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 112.5,
+      "PSA 5": 1.5,
+      "PSA 6": 11.99,
+      "PSA 8": 29.99,
+      "PSA 9": 28.75
+    },
+    "raw_nm_avg": 1.99
   },
   {
     "number": 38,
-    "name": "Silcoon",
+    "name": "Manectric",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 38,
-    "name": "Silcoon",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "38/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 113.5,
+      "PSA 6": 5.5,
+      "PSA 7": 18.02,
+      "PSA 8": 31,
+      "PSA 9": 109.99
+    },
+    "raw_nm_avg": 2.95
   },
   {
     "number": 39,
-    "name": "Swalot",
+    "name": "Masquerain",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 39,
-    "name": "Swalot",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "39/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 8": 19.95,
+      "PSA 9": 33.71
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 40,
-    "name": "Swellow",
+    "name": "Metang",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 40,
-    "name": "Swellow",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "40/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 349.99,
+      "PSA 7": 19.99,
+      "PSA 8": 20,
+      "PSA 9": 15.5
+    },
+    "raw_nm_avg": 27.95
   },
   {
     "number": 41,
-    "name": "Tropius",
+    "name": "Minun",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 41,
-    "name": "Tropius",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "41/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 235.0,
+      "PSA 6": 30,
+      "PSA 7": 29.99,
+      "PSA 8": 9.99,
+      "PSA 9": 52
+    },
+    "raw_nm_avg": 9.28
   },
   {
     "number": 42,
-    "name": "Volbeat",
+    "name": "Nosepass",
     "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 42,
-    "name": "Volbeat",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "card_number": "42/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 300,
+      "PSA 5": 16.5,
+      "PSA 6": 19.99,
+      "PSA 7": 19.99,
+      "PSA 8": 26,
+      "PSA 9": 41
+    },
+    "raw_nm_avg": 9.99
   },
   {
     "number": 43,
-    "name": "Altaria",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 43,
-    "name": "Altaria",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Nuzleaf",
+    "rarity": "Uncommon",
+    "card_number": "43/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 36.1,
+      "PSA 4": 9.01,
+      "PSA 6": 5.5,
+      "PSA 7": 16.43,
+      "PSA 8": 14.05,
+      "PSA 9": 29.99
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 44,
-    "name": "Beautifly",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 44,
-    "name": "Beautifly",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 45,
-    "name": "Blaziken",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Plusle",
+    "rarity": "Uncommon",
+    "card_number": "44/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 254.99,
+      "PSA 4": 16.5,
+      "PSA 7": 29.99,
+      "PSA 8": 66,
+      "PSA 9": 99
+    },
+    "raw_nm_avg": 13.68
   },
   {
     "number": 45,
-    "name": "Blaziken",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Shelgon",
+    "rarity": "Uncommon",
+    "card_number": "45/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 77,
+      "PSA 7": 14.5,
+      "PSA 8": 30,
+      "PSA 9": 60
+    },
+    "raw_nm_avg": 7.69
   },
   {
     "number": 46,
-    "name": "Camerupt",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 46,
-    "name": "Camerupt",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 47,
-    "name": "Gardevoir",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Silcoon",
+    "rarity": "Uncommon",
+    "card_number": "46/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 214.99,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 47,
-    "name": "Gardevoir",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Solrock",
+    "rarity": "Uncommon",
+    "card_number": "47/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 62.47,
+      "PSA 5": 23.57,
+      "PSA 7": 10.5,
+      "PSA 8": 15.75,
+      "PSA 9": 13.5
+    },
+    "raw_nm_avg": 4.09
   },
   {
     "number": 48,
-    "name": "Gyarados",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 48,
-    "name": "Gyarados",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Starmie",
+    "rarity": "Uncommon",
+    "card_number": "48/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 47.99,
+      "PSA 7": 26.99,
+      "PSA 8": 60,
+      "PSA 9": 75
+    },
+    "raw_nm_avg": 2.34
   },
   {
     "number": 49,
-    "name": "Jirachi",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 49,
-    "name": "Jirachi",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 50,
-    "name": "Ludicolo",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Swellow",
+    "rarity": "Uncommon",
+    "card_number": "49/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 140.49,
+      "PSA 8": 24.99,
+      "PSA 9": 18.27
+    },
+    "raw_nm_avg": 12.06
   },
   {
     "number": 50,
-    "name": "Ludicolo",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Vigoroth",
+    "rarity": "Uncommon",
+    "card_number": "50/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 275,
+      "PSA 4": 5,
+      "PSA 8": 10.5,
+      "PSA 9": 35
+    },
+    "raw_nm_avg": 2.5
   },
   {
     "number": 51,
-    "name": "Lunatone",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 51,
-    "name": "Lunatone",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 52,
-    "name": "Magcargo",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Weezing",
+    "rarity": "Uncommon",
+    "card_number": "51/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 40.6,
+      "PSA 6": 19.99,
+      "PSA 7": 12.5,
+      "PSA 8": 57,
+      "PSA 9": 65
+    },
+    "raw_nm_avg": 15
   },
   {
     "number": 52,
-    "name": "Magcargo",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Bagon",
+    "rarity": "Common",
+    "card_number": "52/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 108.5,
+      "PSA 6": 10,
+      "PSA 9": 65
+    },
+    "raw_nm_avg": 14.99
   },
   {
     "number": 53,
-    "name": "Mightyena",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 53,
-    "name": "Mightyena",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 54,
-    "name": "Nosepass",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Baltoy",
+    "rarity": "Common",
+    "card_number": "53/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 235,
+      "PSA 8": 16,
+      "PSA 9": 39
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 54,
-    "name": "Nosepass",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Barboach",
+    "rarity": "Common",
+    "card_number": "54/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 6": 10.5,
+      "PSA 8": 20.5,
+      "PSA 9": 20.96
+    },
+    "raw_nm_avg": 8.99
   },
   {
     "number": 55,
-    "name": "Raichu",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 55,
-    "name": "Raichu",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 56,
-    "name": "Salamence",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Beldum",
+    "rarity": "Common",
+    "card_number": "55/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 244.25,
+      "PSA 5": 8.5,
+      "PSA 6": 24.99,
+      "PSA 8": 26,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 10.99
   },
   {
     "number": 56,
-    "name": "Salamence",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Carvanha",
+    "rarity": "Common",
+    "card_number": "56/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 305,
+      "PSA 8": 29.99,
+      "PSA 9": 70
+    },
+    "raw_nm_avg": 2.99
   },
   {
     "number": 57,
-    "name": "Sharpedo",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 57,
-    "name": "Sharpedo",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 58,
-    "name": "Solrock",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Corphish",
+    "rarity": "Common",
+    "card_number": "57/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 90,
+      "PSA 6": 19.99,
+      "PSA 7": 22.5,
+      "PSA 8": 37,
+      "PSA 9": 46
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 58,
-    "name": "Solrock",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Duskull",
+    "rarity": "Common",
+    "card_number": "58/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 230,
+      "PSA 6": 9.99,
+      "PSA 7": 34,
+      "PSA 8": 35,
+      "PSA 9": 36
+    },
+    "raw_nm_avg": 20.52
   },
   {
     "number": 59,
-    "name": "Starmie",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 59,
-    "name": "Starmie",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 60,
-    "name": "Swampert",
-    "rarity": "Rare",
-    "variant": "Regular"
+    "name": "Electrike",
+    "rarity": "Common",
+    "card_number": "59/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 121.51,
+      "PSA 8": 29,
+      "PSA 9": 33
+    },
+    "raw_nm_avg": 1.895
   },
   {
     "number": 60,
-    "name": "Swampert",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
+    "name": "Electrike",
+    "rarity": "Common",
+    "card_number": "60/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 42.47,
+      "PSA 6": 9.99,
+      "PSA 7": 20.5,
+      "PSA 8": 15.5,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 12.5
   },
   {
     "number": 61,
-    "name": "Vileplume",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 61,
-    "name": "Vileplume",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 62,
-    "name": "Altaria",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
+    "name": "Goldeen",
+    "rarity": "Common",
+    "card_number": "61/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 179.99,
+      "PSA 7": 3.75,
+      "PSA 8": 11.5,
+      "PSA 9": 13.5
+    },
+    "raw_nm_avg": 12.99
   },
   {
     "number": 62,
-    "name": "Altaria",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
+    "name": "Koffing",
+    "rarity": "Common",
+    "card_number": "62/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 39.97,
+      "PSA 6": 3.5,
+      "PSA 8": 19.5,
+      "PSA 9": 22.03
+    },
+    "raw_nm_avg": 15
   },
   {
     "number": 63,
-    "name": "Beautifly",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
-  },
-  {
-    "number": 63,
-    "name": "Beautifly",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 64,
-    "name": "Crobat",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
+    "name": "Lotad",
+    "rarity": "Common",
+    "card_number": "63/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 595,
+      "PSA 8": 27,
+      "PSA 9": 41
+    },
+    "raw_nm_avg": 5.5
   },
   {
     "number": 64,
-    "name": "Crobat",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
+    "name": "Magikarp",
+    "rarity": "Common",
+    "card_number": "64/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 50,
+      "PSA 10": 2000,
+      "PSA 6": 60.1,
+      "PSA 7": 56,
+      "PSA 8": 97.5,
+      "PSA 9": 227.5
+    },
+    "raw_nm_avg": 42.99
   },
   {
     "number": 65,
-    "name": "Dusclops",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
-  },
-  {
-    "number": 65,
-    "name": "Dusclops",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 66,
-    "name": "Gardevoir",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
+    "name": "Makuhita",
+    "rarity": "Common",
+    "card_number": "65/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 164.99,
+      "PSA 7": 7.92,
+      "PSA 8": 34.99,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 10.54
   },
   {
     "number": 66,
-    "name": "Gardevoir",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
+    "name": "Natu",
+    "rarity": "Common",
+    "card_number": "66/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 227.5,
+      "PSA 6": 23.53,
+      "PSA 8": 37.95,
+      "PSA 9": 58
+    },
+    "raw_nm_avg": 19.99
   },
   {
     "number": 67,
-    "name": "Gyarados",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
-  },
-  {
-    "number": 67,
-    "name": "Gyarados",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 68,
-    "name": "Ludicolo",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
+    "name": "Nincada",
+    "rarity": "Common",
+    "card_number": "67/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 7": 26,
+      "PSA 8": 10.5,
+      "PSA 9": 28
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 68,
-    "name": "Ludicolo",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
+    "name": "Numel",
+    "rarity": "Common",
+    "card_number": "68/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 56,
+      "PSA 6": 31.76,
+      "PSA 7": 15.99,
+      "PSA 8": 10,
+      "PSA 9": 46
+    },
+    "raw_nm_avg": 11.5
   },
   {
     "number": 69,
-    "name": "Metagross",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
-  },
-  {
-    "number": 69,
-    "name": "Metagross",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 70,
-    "name": "Salamence",
-    "rarity": "Holo Rare",
-    "variant": "Holo"
+    "name": "Phanpy",
+    "rarity": "Common",
+    "card_number": "69/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 179.15,
+      "PSA 6": 5.5,
+      "PSA 8": 15.5,
+      "PSA 9": 57
+    },
+    "raw_nm_avg": 17
   },
   {
     "number": 70,
-    "name": "Salamence",
-    "rarity": "Holo Rare",
-    "variant": "Reverse Holo"
+    "name": "Poochyena",
+    "rarity": "Common",
+    "card_number": "70/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 549.99,
+      "PSA 6": 10.5,
+      "PSA 7": 34.99,
+      "PSA 8": 17,
+      "PSA 9": 50.6
+    },
+    "raw_nm_avg": 7.5
   },
   {
     "number": 71,
-    "name": "Crobat ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Seedot",
+    "rarity": "Common",
+    "card_number": "71/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 180,
+      "PSA 7": 7.63,
+      "PSA 8": 17,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 72,
-    "name": "Deoxys ex (Normal)",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Shroomish",
+    "rarity": "Common",
+    "card_number": "72/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 22,
+      "PSA 10": 225,
+      "PSA 6": 19.67,
+      "PSA 8": 25,
+      "PSA 9": 37.69
+    },
+    "raw_nm_avg": 1.9
   },
   {
     "number": 73,
-    "name": "Deoxys ex (Attack)",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Slakoth",
+    "rarity": "Common",
+    "card_number": "73/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 420,
+      "PSA 8": 7.5,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 2.755
   },
   {
     "number": 74,
-    "name": "Deoxys ex (Defense)",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Slugma",
+    "rarity": "Common",
+    "card_number": "74/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 485,
+      "PSA 8": 10.5,
+      "PSA 9": 108.07
+    },
+    "raw_nm_avg": 3.44
   },
   {
     "number": 75,
-    "name": "Deoxys ex (Speed)",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Slugma",
+    "rarity": "Common",
+    "card_number": "75/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 249.99,
+      "PSA 8": 9.95,
+      "PSA 9": 29.99
+    },
+    "raw_nm_avg": 10.995
   },
   {
     "number": 76,
-    "name": "Hariyama ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Spoink",
+    "rarity": "Common",
+    "card_number": "76/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 199.99,
+      "PSA 8": 27.99,
+      "PSA 9": 17
+    },
+    "raw_nm_avg": 11.95
   },
   {
     "number": 77,
-    "name": "Manectric ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Staryu",
+    "rarity": "Common",
+    "card_number": "77/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 189.99,
+      "PSA 6": 21.97,
+      "PSA 7": 21,
+      "PSA 8": 30,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 9.99
   },
   {
     "number": 78,
-    "name": "Rayquaza ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Surskit",
+    "rarity": "Common",
+    "card_number": "78/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 47,
+      "PSA 8": 6.55,
+      "PSA 9": 13.5
+    },
+    "raw_nm_avg": 0.99
   },
   {
     "number": 79,
-    "name": "Salamence ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
+    "name": "Swablu",
+    "rarity": "Common",
+    "card_number": "79/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 230,
+      "PSA 7": 6.5,
+      "PSA 8": 10.2,
+      "PSA 9": 22.5
+    },
+    "raw_nm_avg": 1.99
   },
   {
     "number": 80,
+    "name": "Taillow",
+    "rarity": "Common",
+    "card_number": "80/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 300,
+      "PSA 5": 6.5,
+      "PSA 6": 10.5,
+      "PSA 8": 22.5,
+      "PSA 9": 51
+    },
+    "raw_nm_avg": 9.99
+  },
+  {
+    "number": 81,
+    "name": "Wingull",
+    "rarity": "Common",
+    "card_number": "81/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 77,
+      "PSA 7": 5.5,
+      "PSA 8": 19.99,
+      "PSA 9": 45
+    },
+    "raw_nm_avg": 11.75
+  },
+  {
+    "number": 82,
+    "name": "Wurmple",
+    "rarity": "Common",
+    "card_number": "82/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 215,
+      "PSA 7": 9.99,
+      "PSA 8": 14.99,
+      "PSA 9": 44.95
+    },
+    "raw_nm_avg": 1.98
+  },
+  {
+    "number": 83,
+    "name": "Zubat",
+    "rarity": "Common",
+    "card_number": "83/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 349.99,
+      "PSA 6": 11.61,
+      "PSA 7": 15,
+      "PSA 8": 25,
+      "PSA 9": 50
+    },
+    "raw_nm_avg": 1.99
+  },
+  {
+    "number": 84,
+    "name": "Balloon Berry",
+    "rarity": "Uncommon",
+    "card_number": "84/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 36.1
+    },
+    "raw_nm_avg": 4.99
+  },
+  {
+    "number": 85,
+    "name": "Crystal Shard",
+    "rarity": "Uncommon",
+    "card_number": "85/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 8": 10.51,
+      "PSA 9": 17.5
+    },
+    "raw_nm_avg": 8.2
+  },
+  {
+    "number": 86,
+    "name": "Energy Charge",
+    "rarity": "Uncommon",
+    "card_number": "86/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 43.01,
+      "PSA 7": 14.5,
+      "PSA 8": 20.5,
+      "PSA 9": 22.99
+    },
+    "raw_nm_avg": 1.99
+  },
+  {
+    "number": 87,
+    "name": "Lady Outing",
+    "rarity": "Uncommon",
+    "card_number": "87/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 248.88,
+      "PSA 8": 17.5,
+      "PSA 9": 31
+    },
+    "raw_nm_avg": 1.99
+  },
+  {
+    "number": 88,
+    "name": "Master Ball",
+    "rarity": "Uncommon",
+    "card_number": "88/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 150,
+      "PSA 7": 24.99,
+      "PSA 8": 19.99,
+      "PSA 9": 32.64
+    },
+    "raw_nm_avg": 5.5
+  },
+  {
+    "number": 89,
+    "name": "Meteor Falls",
+    "rarity": "Uncommon",
+    "card_number": "89/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 8": 18.5,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 1.89
+  },
+  {
+    "number": 90,
+    "name": "Professor Cozmo's Discovery",
+    "rarity": "Uncommon",
+    "card_number": "90/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 99,
+      "PSA 9": 39.99
+    },
+    "raw_nm_avg": 5
+  },
+  {
+    "number": 91,
+    "name": "Space Center",
+    "rarity": "Uncommon",
+    "card_number": "91/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 399.99,
+      "PSA 6": 5.51,
+      "PSA 7": 45.01,
+      "PSA 8": 27,
+      "PSA 9": 40
+    },
+    "raw_nm_avg": 4
+  },
+  {
+    "number": 92,
+    "name": "Strength Charm",
+    "rarity": "Uncommon",
+    "card_number": "92/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 67,
+      "PSA 7": 2,
+      "PSA 8": 26,
+      "PSA 9": 90
+    },
+    "raw_nm_avg": 8.215
+  },
+  {
+    "number": 93,
+    "name": "Boost Energy",
+    "rarity": "Uncommon",
+    "card_number": "93/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 23.54,
+      "PSA 9": 8.52
+    },
+    "raw_nm_avg": 2.96
+  },
+  {
+    "number": 94,
+    "name": "Heal Energy",
+    "rarity": "Uncommon",
+    "card_number": "94/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 8": 13.5,
+      "PSA 9": 55
+    },
+    "raw_nm_avg": 3.95
+  },
+  {
+    "number": 95,
+    "name": "Scramble Energy",
+    "rarity": "Uncommon",
+    "card_number": "95/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 52,
+      "PSA 5": 3,
+      "PSA 6": 24.99,
+      "PSA 7": 15.18,
+      "PSA 8": 11.5,
+      "PSA 9": 40
+    },
+    "raw_nm_avg": 3.71
+  },
+  {
+    "number": 96,
+    "name": "Crobat ex",
+    "rarity": "Ultra Rare",
+    "card_number": "96/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 70,
+      "PSA 10": 1200,
+      "PSA 3": 29.99,
+      "PSA 4": 28.95,
+      "PSA 5": 49.99,
+      "PSA 6": 51.89,
+      "PSA 7": 70,
+      "PSA 8": 134.38,
+      "PSA 9": 272
+    },
+    "raw_nm_avg": 54.74
+  },
+  {
+    "number": 97,
+    "name": "Deoxys ex (Normal Forme)",
+    "rarity": "Ultra Rare",
+    "card_number": "97/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 140,
+      "PSA 10": 6495,
+      "PSA 2": 30,
+      "PSA 4": 55,
+      "PSA 5": 100,
+      "PSA 6": 202.5,
+      "PSA 7": 160,
+      "PSA 8": 330,
+      "PSA 9": 860.01
+    },
+    "raw_nm_avg": 225
+  },
+  {
+    "number": 98,
+    "name": "Deoxys ex (Attack Forme)",
+    "rarity": "Ultra Rare",
+    "card_number": "98/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 99.99,
+      "PSA 10": 3550,
+      "PSA 2": 39.99,
+      "PSA 3": 19.99,
+      "PSA 4": 72,
+      "PSA 5": 101,
+      "PSA 6": 99.99,
+      "PSA 7": 153.5,
+      "PSA 8": 299.99,
+      "PSA 9": 392.63
+    },
+    "raw_nm_avg": 149.76
+  },
+  {
+    "number": 99,
+    "name": "Deoxys ex (Defense Forme)",
+    "rarity": "Ultra Rare",
+    "card_number": "99/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 71,
+      "PSA 10": 5888,
+      "PSA 3": 36,
+      "PSA 4": 65,
+      "PSA 5": 75,
+      "PSA 6": 116,
+      "PSA 7": 150,
+      "PSA 8": 207.5,
+      "PSA 9": 550
+    },
+    "raw_nm_avg": 48.43
+  },
+  {
+    "number": 100,
+    "name": "Hariyama ex",
+    "rarity": "Ultra Rare",
+    "card_number": "100/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 10": 1400,
+      "PSA 4": 51.21,
+      "PSA 5": 37,
+      "PSA 6": 33.16,
+      "PSA 7": 50,
+      "PSA 8": 86,
+      "PSA 9": 96
+    },
+    "raw_nm_avg": 49.99
+  },
+  {
+    "number": 101,
+    "name": "Manectric ex",
+    "rarity": "Ultra Rare",
+    "card_number": "101/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 74.99,
+      "PSA 10": 550,
+      "PSA 4": 8.52,
+      "PSA 5": 36,
+      "PSA 6": 49.99,
+      "PSA 7": 39,
+      "PSA 8": 100,
+      "PSA 9": 177.92
+    },
+    "raw_nm_avg": 61.125
+  },
+  {
+    "number": 102,
+    "name": "Rayquaza ex",
+    "rarity": "Ultra Rare",
+    "card_number": "102/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 92,
+      "PSA 10": 8459.99,
+      "PSA 2": 109.5,
+      "PSA 3": 120,
+      "PSA 4": 170,
+      "PSA 5": 280,
+      "PSA 6": 299,
+      "PSA 7": 405,
+      "PSA 8": 700,
+      "PSA 9": 1175
+    },
+    "raw_nm_avg": 185
+  },
+  {
+    "number": 103,
+    "name": "Salamence ex",
+    "rarity": "Ultra Rare",
+    "card_number": "103/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 124.99,
+      "PSA 10": 2880,
+      "PSA 2": 90,
+      "PSA 3": 33,
+      "PSA 5": 100,
+      "PSA 6": 117.5,
+      "PSA 7": 175,
+      "PSA 8": 325,
+      "PSA 9": 450
+    },
+    "raw_nm_avg": 163.5
+  },
+  {
+    "number": 104,
     "name": "Sharpedo ex",
-    "rarity": "Rare Holo EX",
-    "variant": "Holo"
-  },
-  {
-    "number": 81,
-    "name": "Crystal Shard",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 81,
-    "name": "Crystal Shard",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 82,
-    "name": "Meteor Falls",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 82,
-    "name": "Meteor Falls",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 83,
-    "name": "Professor Birch",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 83,
-    "name": "Professor Birch",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 84,
-    "name": "Professor Cozmo's Discovery",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 84,
-    "name": "Professor Cozmo's Discovery",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 85,
-    "name": "Rare Candy",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 85,
-    "name": "Rare Candy",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 86,
-    "name": "Space Center",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 86,
-    "name": "Space Center",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 87,
-    "name": "Strength Charm",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 87,
-    "name": "Strength Charm",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 88,
-    "name": "Boost Energy",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 88,
-    "name": "Boost Energy",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 89,
-    "name": "Double Rainbow Energy",
-    "rarity": "Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 89,
-    "name": "Double Rainbow Energy",
-    "rarity": "Rare",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 90,
-    "name": "Scramble Energy",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 90,
-    "name": "Scramble Energy",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 91,
-    "name": "Cacnea",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 91,
-    "name": "Cacnea",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 92,
-    "name": "Duskull",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 92,
-    "name": "Duskull",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 93,
-    "name": "Magikarp",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 93,
-    "name": "Magikarp",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 94,
-    "name": "Nincada",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 94,
-    "name": "Nincada",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 95,
-    "name": "Oddish",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 95,
-    "name": "Oddish",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 96,
-    "name": "Psyduck",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 96,
-    "name": "Psyduck",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 97,
-    "name": "Seedot",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 97,
-    "name": "Seedot",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 98,
-    "name": "Staryu",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 98,
-    "name": "Staryu",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 99,
-    "name": "Swablu",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 99,
-    "name": "Swablu",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 100,
-    "name": "Torchic",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 100,
-    "name": "Torchic",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 101,
-    "name": "Bagon",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 101,
-    "name": "Bagon",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 102,
-    "name": "Beldum",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 102,
-    "name": "Beldum",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 103,
-    "name": "Metang",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 103,
-    "name": "Metang",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
-  },
-  {
-    "number": 104,
-    "name": "Shelgon",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 104,
-    "name": "Shelgon",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "rarity": "Ultra Rare",
+    "card_number": "104/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 43.89,
+      "PSA 10": 799.1,
+      "PSA 5": 45,
+      "PSA 6": 49,
+      "PSA 7": 76.6,
+      "PSA 8": 111.46,
+      "PSA 9": 222.5
+    },
+    "raw_nm_avg": 105
   },
   {
     "number": 105,
-    "name": "Wurmple",
-    "rarity": "Common",
-    "variant": "Regular"
-  },
-  {
-    "number": 105,
-    "name": "Wurmple",
-    "rarity": "Common",
-    "variant": "Reverse Holo"
+    "name": "Latias Star",
+    "rarity": "Ultra Rare",
+    "card_number": "105/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 1225,
+      "PSA 10": 1135,
+      "PSA 2": 2030,
+      "PSA 3": 1725,
+      "PSA 4": 1865.6,
+      "PSA 5": 2600,
+      "PSA 6": 3650,
+      "PSA 7": 3605,
+      "PSA 8": 5000,
+      "PSA 9": 13000
+    },
+    "raw_nm_avg": 190
   },
   {
     "number": 106,
-    "name": "Nuzleaf",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 106,
-    "name": "Nuzleaf",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Latios Star",
+    "rarity": "Ultra Rare",
+    "card_number": "106/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 1534,
+      "PSA 10": 51100,
+      "PSA 2": 1030,
+      "PSA 3": 1275,
+      "PSA 4": 2035,
+      "PSA 5": 1705,
+      "PSA 6": 2100,
+      "PSA 7": 3100,
+      "PSA 8": 4325,
+      "PSA 9": 9500
+    },
+    "raw_nm_avg": 1140.56
   },
   {
     "number": 107,
-    "name": "Dusclops",
-    "rarity": "Uncommon",
-    "variant": "Regular"
-  },
-  {
-    "number": 107,
-    "name": "Dusclops",
-    "rarity": "Uncommon",
-    "variant": "Reverse Holo"
+    "name": "Rayquaza Star",
+    "rarity": "Ultra Rare",
+    "card_number": "107/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 4000,
+      "PSA 10": 9897.94,
+      "PSA 2": 5150,
+      "PSA 3": 6750,
+      "PSA 4": 8300,
+      "PSA 5": 9000,
+      "PSA 6": 12500,
+      "PSA 7": 14900,
+      "PSA 8": 15000,
+      "PSA 9": 29000
+    },
+    "raw_nm_avg": 2500.99
   },
   {
     "number": 108,
-    "name": "Latias Gold Star",
-    "rarity": "Secret Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 109,
-    "name": "Latios Gold Star",
-    "rarity": "Secret Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 110,
-    "name": "Rayquaza Gold Star",
-    "rarity": "Secret Rare",
-    "variant": "Regular"
-  },
-  {
-    "number": 111,
     "name": "Rocket's Raikou ex",
     "rarity": "Secret Rare",
+    "card_number": "108/107",
+    "variant": "Regular",
+    "psa_prices": {
+      "PSA 1": 249.99,
+      "PSA 10": 4400,
+      "PSA 3": 127,
+      "PSA 4": 149.95,
+      "PSA 5": 175,
+      "PSA 6": 183.5,
+      "PSA 7": 195.25,
+      "PSA 8": 260,
+      "PSA 9": 465
+    },
+    "raw_nm_avg": 230
+  },
+  {
+    "number": 999,
+    "name": "Deoxys Booster Pack",
+    "rarity": "",
+    "card_number": null,
+    "variant": "Regular"
+  },
+  {
+    "number": 999,
+    "name": "Deoxys Booster Box",
+    "rarity": "",
+    "card_number": null,
+    "variant": "Regular"
+  },
+  {
+    "number": 999,
+    "name": "Deoxys Theme Deck - \"Starcharge\"",
+    "rarity": "",
+    "card_number": null,
+    "variant": "Regular"
+  },
+  {
+    "number": 999,
+    "name": "Deoxys Theme Deck - \"Jetstream\"",
+    "rarity": "",
+    "card_number": null,
     "variant": "Regular"
   }
 ]
