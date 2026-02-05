@@ -1,4 +1,6 @@
 .env
 psa_pop_deoxys.json
+vending_inventory.json
+vending_export.json
 __pycache__/
 *.pyc
