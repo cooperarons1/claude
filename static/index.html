@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX Deoxys - PSA Report Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">&#9733;</span>
+        <div>
+          <h1>EX Deoxys</h1>
+          <p class="subtitle">PSA Graded Price &amp; Population Report</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="refreshBtn" class="btn btn-primary" title="Fetch latest data from APIs">
+          <span class="btn-icon">&#8635;</span> Refresh Data
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Stats bar -->
+    <section class="stats-bar" id="statsBar">
+      <div class="stat-card">
+        <div class="stat-value" id="statTotal">--</div>
+        <div class="stat-label">Total Cards</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statVariants">--</div>
+        <div class="stat-label">Variants</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statPriced">--</div>
+        <div class="stat-label">With Pricing</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statPop">--</div>
+        <div class="stat-label">With Pop Data</div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="filter-row">
+        <input type="text" id="searchInput" class="filter-input" placeholder="Search by card name or number...">
+        <select id="rarityFilter" class="filter-select">
+          <option value="">All Rarities</option>
+          <option value="Common">Common</option>
+          <option value="Uncommon">Uncommon</option>
+          <option value="Rare">Rare</option>
+          <option value="Holo Rare">Holo Rare</option>
+          <option value="Rare Holo EX">Rare Holo EX</option>
+          <option value="Secret Rare">Secret Rare</option>
+        </select>
+        <select id="variantFilter" class="filter-select">
+          <option value="">All Variants</option>
+          <option value="Regular">Regular</option>
+          <option value="Holo">Holo</option>
+          <option value="Reverse Holo">Reverse Holo</option>
+        </select>
+        <select id="viewMode" class="filter-select">
+          <option value="pricing">Pricing View</option>
+          <option value="pop">Pop Count View</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Loading state -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading report data...</p>
+    </div>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <div class="empty-icon">&#128203;</div>
+      <h2>No Data Yet</h2>
+      <p>Click <strong>Refresh Data</strong> to fetch pricing and pop counts from the APIs.</p>
+      <p class="hint">Make sure your .env file has POKETRACE_API_KEY and PSA_API_TOKEN set.</p>
+    </div>
+
+    <!-- Data table -->
+    <section id="tableSection" class="table-section" style="display:none;">
+      <div class="table-wrap">
+        <table id="reportTable">
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Refresh log -->
+    <div id="logPanel" class="log-panel" style="display:none;">
+      <div class="log-header">
+        <span>API Log</span>
+        <button class="btn-close" id="closeLog">&times;</button>
+      </div>
+      <pre id="logContent"></pre>
+    </div>
+  </main>
+
+  <footer>
+    <p>Data sourced from Poketrace API (pricing) &amp; PSA Card API (pop counts)</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
