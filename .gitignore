@@ -1,1 +1,4 @@
 .env
+psa_pop_deoxys.json
+__pycache__/
+*.pyc
