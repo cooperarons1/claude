@@ -154,7 +154,32 @@ SET_CATALOG = {
     "prismatic-evolutions": {
         "name": "Prismatic Evolutions",
         "series": "Scarlet & Violet",
-        "products": _std_products("pe", "prismatic evolutions", "Scarlet & Violet"),
+        "products": [
+            {
+                "id": "pe-etb",
+                "search": ["pokemon prismatic evolutions elite trainer box", "prismatic evolutions elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Prismatic Evolutions ETB with 9 booster packs, energy cards, dice, and storage box.",
+                "packs": 9,
+                "type": "etb",
+            },
+            {
+                "id": "pe-bundle",
+                "search": ["pokemon prismatic evolutions booster bundle", "prismatic evolutions booster bundle"],
+                "name": "Booster Bundle",
+                "description": "6 booster packs of Scarlet & Violet — Prismatic Evolutions.",
+                "packs": 6,
+                "type": "bundle",
+            },
+            {
+                "id": "pe-booster-pack",
+                "search": ["pokemon prismatic evolutions booster pack", "prismatic evolutions booster pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
     },
     "surging-sparks": {
         "name": "Surging Sparks",
