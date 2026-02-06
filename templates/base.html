@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Phantasmal Flames Price Tracker{% endblock %}</title>
+    <title>{% block title %}PokePriceTracker{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <nav class="navbar">
-        <a href="/" class="nav-brand">Phantasmal Flames</a>
-        <span class="nav-tagline">Sealed Product Price Tracker</span>
+        <a href="/" class="nav-brand">PokePriceTracker</a>
+        <span class="nav-tagline">Pokemon TCG Sealed Product Prices</span>
     </nav>
 
     <main class="container">
@@ -17,8 +17,110 @@
     </main>
 
     <footer class="footer">
-        <p>Prices based on recent market sales. Not affiliated with The Pokemon Company.</p>
+        <p>Prices via PriceCharting. AI powered by Claude Opus 4.6. Not affiliated with The Pokemon Company.</p>
     </footer>
+
+    <!-- Chat Widget -->
+    <button class="chat-fab" id="chatFab" title="Ask Claude">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+
+    <div class="chat-panel hidden" id="chatPanel">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <span class="chat-title">Claude Opus 4.6</span>
+                <span class="chat-subtitle">Pokemon TCG Assistant</span>
+            </div>
+            <button class="chat-close" id="chatClose">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg assistant">
+                <div class="chat-bubble">Hey! I'm Claude, your Pokemon TCG pricing assistant. Ask me anything about sealed products, set values, or best deals!</div>
+            </div>
+        </div>
+        <form class="chat-input-area" id="chatForm">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Ask about Pokemon TCG prices..." autocomplete="off">
+            <button type="submit" class="chat-send" id="chatSend">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </form>
+    </div>
+
+    <script>
+    (function() {
+        const fab = document.getElementById('chatFab');
+        const panel = document.getElementById('chatPanel');
+        const closeBtn = document.getElementById('chatClose');
+        const form = document.getElementById('chatForm');
+        const input = document.getElementById('chatInput');
+        const messagesEl = document.getElementById('chatMessages');
+        let history = [];
+
+        fab.addEventListener('click', function() {
+            panel.classList.toggle('hidden');
+            if (!panel.classList.contains('hidden')) input.focus();
+        });
+
+        closeBtn.addEventListener('click', function() {
+            panel.classList.add('hidden');
+        });
+
+        function addMessage(role, text) {
+            const div = document.createElement('div');
+            div.className = 'chat-msg ' + role;
+            div.innerHTML = '<div class="chat-bubble">' + escapeHtml(text) + '</div>';
+            messagesEl.appendChild(div);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+
+        function escapeHtml(str) {
+            const d = document.createElement('div');
+            d.textContent = str;
+            return d.innerHTML;
+        }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            addMessage('user', msg);
+            input.value = '';
+            input.disabled = true;
+
+            // Show typing indicator
+            const typing = document.createElement('div');
+            typing.className = 'chat-msg assistant';
+            typing.innerHTML = '<div class="chat-bubble typing">Thinking...</div>';
+            messagesEl.appendChild(typing);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+
+            try {
+                const resp = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({message: msg, history: history})
+                });
+                const data = await resp.json();
+                typing.remove();
+
+                if (data.reply) {
+                    addMessage('assistant', data.reply);
+                    history.push({role: 'user', content: msg});
+                    history.push({role: 'assistant', content: data.reply});
+                } else {
+                    addMessage('assistant', data.error || 'Something went wrong. Please try again.');
+                }
+            } catch (err) {
+                typing.remove();
+                addMessage('assistant', 'Connection error. Please try again.');
+            }
+
+            input.disabled = false;
+            input.focus();
+        });
+    })();
+    </script>
 
     {% block scripts %}{% endblock %}
 </body>

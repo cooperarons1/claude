@@ -1,5 +1,5 @@
 """
-Phantasmal Flames sealed product pricing via PriceCharting API.
+Pokemon TCG sealed product pricing via PriceCharting API.
 
 PriceCharting API docs: https://www.pricecharting.com/api-documentation
 - Auth: ?t=TOKEN parameter
@@ -16,57 +16,218 @@ import urllib.request
 
 PC_BASE = "https://www.pricecharting.com"
 
-# Phantasmal Flames product search terms and metadata
-PRODUCT_CATALOG = [
-    {
-        "id": "pf-booster-box",
-        "search": ["phantasmal flames booster box"],
-        "name": "Booster Box",
-        "description": "36 booster packs of Mega Evolution — Phantasmal Flames.",
-        "packs": 36,
-        "type": "booster-box",
+
+def _std_products(set_prefix, set_name, series=""):
+    """Generate standard sealed product entries for a set."""
+    label = f"{series} — {set_name}" if series else set_name
+    return [
+        {
+            "id": f"{set_prefix}-booster-box",
+            "search": [f"{set_name} booster box"],
+            "name": "Booster Box",
+            "description": f"36 booster packs of {label}.",
+            "packs": 36,
+            "type": "booster-box",
+        },
+        {
+            "id": f"{set_prefix}-etb",
+            "search": [f"{set_name} elite trainer box"],
+            "name": "Elite Trainer Box",
+            "description": f"{set_name} ETB with 9 booster packs, energy cards, dice, and storage box.",
+            "packs": 9,
+            "type": "etb",
+        },
+        {
+            "id": f"{set_prefix}-bundle",
+            "search": [f"{set_name} booster bundle", f"{set_name} bundle"],
+            "name": "Booster Bundle",
+            "description": f"6 booster packs of {label}.",
+            "packs": 6,
+            "type": "bundle",
+        },
+        {
+            "id": f"{set_prefix}-build-battle",
+            "search": [f"{set_name} build and battle", f"{set_name} build battle"],
+            "name": "Build & Battle Box",
+            "description": f"Pre-release kit with 4 booster packs and promo card.",
+            "packs": 4,
+            "type": "build-battle",
+        },
+        {
+            "id": f"{set_prefix}-booster-pack",
+            "search": [f"{set_name} booster pack", f"{set_name} pack"],
+            "name": "Booster Pack",
+            "description": "Single booster pack with 10 cards.",
+            "packs": 1,
+            "type": "pack",
+        },
+    ]
+
+
+# All supported Pokemon TCG sets
+SET_CATALOG = {
+    "phantasmal-flames": {
+        "name": "Phantasmal Flames",
+        "series": "Mega Evolution",
+        "products": [
+            {
+                "id": "pf-booster-box",
+                "search": ["phantasmal flames booster box"],
+                "name": "Booster Box",
+                "description": "36 booster packs of Mega Evolution — Phantasmal Flames.",
+                "packs": 36,
+                "type": "booster-box",
+            },
+            {
+                "id": "pf-etb",
+                "search": ["phantasmal flames elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Mega Charizard X ETB with 9 booster packs, energy cards, dice, and storage box.",
+                "packs": 9,
+                "type": "etb",
+            },
+            {
+                "id": "pf-pc-etb",
+                "search": ["phantasmal flames pokemon center elite trainer"],
+                "name": "Pokemon Center Exclusive ETB",
+                "description": "Mega Charizard X exclusive ETB with 11 packs and bonus stamped promo card.",
+                "packs": 11,
+                "type": "etb",
+            },
+            {
+                "id": "pf-bundle",
+                "search": ["phantasmal flames booster bundle", "phantasmal flames bundle"],
+                "name": "Booster Bundle",
+                "description": "6 booster packs of Mega Evolution — Phantasmal Flames.",
+                "packs": 6,
+                "type": "bundle",
+            },
+            {
+                "id": "pf-build-battle",
+                "search": ["phantasmal flames build and battle", "phantasmal flames build battle"],
+                "name": "Build & Battle Box",
+                "description": "Pre-release kit with 4 booster packs, 23-card evolution pack, and promo card.",
+                "packs": 4,
+                "type": "build-battle",
+            },
+            {
+                "id": "pf-booster-pack",
+                "search": ["phantasmal flames booster pack", "phantasmal flames pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
     },
-    {
-        "id": "pf-etb",
-        "search": ["phantasmal flames elite trainer box"],
-        "name": "Elite Trainer Box",
-        "description": "Mega Charizard X ETB with 9 booster packs, energy cards, dice, and storage box.",
-        "packs": 9,
-        "type": "etb",
+    "ascended-heroes": {
+        "name": "Ascended Heroes",
+        "series": "Mega Evolution",
+        "products": _std_products("ah", "ascended heroes", "Mega Evolution"),
     },
-    {
-        "id": "pf-pc-etb",
-        "search": ["phantasmal flames pokemon center elite trainer"],
-        "name": "Pokemon Center Exclusive ETB",
-        "description": "Mega Charizard X exclusive ETB with 11 packs and bonus stamped promo card.",
-        "packs": 11,
-        "type": "etb",
+    "prismatic-evolutions": {
+        "name": "Prismatic Evolutions",
+        "series": "Scarlet & Violet",
+        "products": _std_products("pe", "prismatic evolutions", "Scarlet & Violet"),
     },
-    {
-        "id": "pf-bundle",
-        "search": ["phantasmal flames booster bundle", "phantasmal flames bundle", "mega evolution phantasmal flames bundle"],
-        "name": "Booster Bundle",
-        "description": "6 booster packs of Mega Evolution — Phantasmal Flames.",
-        "packs": 6,
-        "type": "bundle",
+    "surging-sparks": {
+        "name": "Surging Sparks",
+        "series": "Scarlet & Violet",
+        "products": _std_products("ss", "surging sparks", "Scarlet & Violet"),
     },
-    {
-        "id": "pf-build-battle",
-        "search": ["phantasmal flames build and battle", "phantasmal flames build battle", "phantasmal flames prerelease"],
-        "name": "Build & Battle Box",
-        "description": "Pre-release kit with 4 booster packs, 23-card evolution pack, and promo card.",
-        "packs": 4,
-        "type": "build-battle",
+    "stellar-crown": {
+        "name": "Stellar Crown",
+        "series": "Scarlet & Violet",
+        "products": _std_products("sc", "stellar crown", "Scarlet & Violet"),
     },
-    {
-        "id": "pf-booster-pack",
-        "search": ["phantasmal flames booster pack", "phantasmal flames pack", "mega evolution phantasmal flames pack"],
-        "name": "Booster Pack",
-        "description": "Single booster pack with 10 cards.",
-        "packs": 1,
-        "type": "pack",
+    "twilight-masquerade": {
+        "name": "Twilight Masquerade",
+        "series": "Scarlet & Violet",
+        "products": _std_products("tm", "twilight masquerade", "Scarlet & Violet"),
     },
+    "temporal-forces": {
+        "name": "Temporal Forces",
+        "series": "Scarlet & Violet",
+        "products": _std_products("tf", "temporal forces", "Scarlet & Violet"),
+    },
+    "paldean-fates": {
+        "name": "Paldean Fates",
+        "series": "Scarlet & Violet",
+        "products": _std_products("pf2", "paldean fates", "Scarlet & Violet"),
+    },
+    "151": {
+        "name": "151",
+        "series": "Scarlet & Violet",
+        "products": [
+            {
+                "id": "151-booster-box",
+                "search": ["pokemon 151 booster box", "151 booster box"],
+                "name": "Booster Box (Japanese Import)",
+                "description": "20 booster packs of Scarlet & Violet — 151.",
+                "packs": 20,
+                "type": "booster-box",
+            },
+            {
+                "id": "151-etb",
+                "search": ["pokemon 151 elite trainer box", "151 elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Pokemon 151 ETB with 9 booster packs, energy cards, dice, and storage box.",
+                "packs": 9,
+                "type": "etb",
+            },
+            {
+                "id": "151-bundle",
+                "search": ["pokemon 151 booster bundle", "151 booster bundle"],
+                "name": "Booster Bundle",
+                "description": "6 booster packs of Scarlet & Violet — 151.",
+                "packs": 6,
+                "type": "bundle",
+            },
+            {
+                "id": "151-booster-pack",
+                "search": ["pokemon 151 booster pack", "151 booster pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
+    },
+    "obsidian-flames": {
+        "name": "Obsidian Flames",
+        "series": "Scarlet & Violet",
+        "products": _std_products("of", "obsidian flames", "Scarlet & Violet"),
+    },
+    "journey-together": {
+        "name": "Journey Together",
+        "series": "Scarlet & Violet",
+        "products": _std_products("jt", "journey together", "Scarlet & Violet"),
+    },
+}
+
+# Ordered list of set slugs for tab display
+SET_ORDER = [
+    "phantasmal-flames",
+    "ascended-heroes",
+    "journey-together",
+    "prismatic-evolutions",
+    "surging-sparks",
+    "stellar-crown",
+    "twilight-masquerade",
+    "temporal-forces",
+    "paldean-fates",
+    "151",
+    "obsidian-flames",
 ]
+
+
+def get_set_list():
+    """Return ordered list of sets for navigation."""
+    return [
+        {"slug": slug, "name": SET_CATALOG[slug]["name"], "series": SET_CATALOG[slug]["series"]}
+        for slug in SET_ORDER
+        if slug in SET_CATALOG
+    ]
 
 
 def load_api_token():
@@ -96,7 +257,7 @@ def pc_request(endpoint, token, params=None):
 
     req = urllib.request.Request(url)
     req.add_header("Accept", "application/json")
-    req.add_header("User-Agent", "PopCounts/1.0 (Pokemon TCG Sealed Product Tracker)")
+    req.add_header("User-Agent", "PokePriceTracker/1.0 (Pokemon TCG Sealed Product Tracker)")
 
     with urllib.request.urlopen(req, timeout=10) as resp:
         return json.loads(resp.read().decode())
@@ -128,14 +289,19 @@ def get_product_price(token, product_id):
     return None
 
 
-def fetch_all_products(token):
-    """Fetch live pricing for all Phantasmal Flames products.
+def fetch_set_products(token, set_slug):
+    """Fetch live pricing for all products in a given set.
 
     Returns list of product dicts with live prices.
     """
+    if set_slug not in SET_CATALOG:
+        return []
+
+    catalog_products = SET_CATALOG[set_slug]["products"]
+    set_name = SET_CATALOG[set_slug]["name"].lower()
     results = []
 
-    for catalog in PRODUCT_CATALOG:
+    for catalog in catalog_products:
         product = {
             "id": catalog["id"],
             "name": catalog["name"],
@@ -166,7 +332,7 @@ def fetch_all_products(token):
             for m in matches:
                 name = (m.get("product-name") or "").lower()
                 console = (m.get("console-name") or "").lower()
-                if "pokemon" in console or "phantasmal" in name:
+                if "pokemon" in console or set_name in name:
                     best_match = m
                     break
 
@@ -222,22 +388,26 @@ def fetch_all_products(token):
     return results
 
 
-def get_products(token=None):
-    """Return all products with pricing.
+def get_products(token=None, set_slug="phantasmal-flames"):
+    """Return all products for a set with pricing.
 
     Returns (products_list, price_source) tuple.
     """
+    if set_slug not in SET_CATALOG:
+        return [], "no_data"
+
     if token:
         try:
-            products = fetch_all_products(token)
+            products = fetch_set_products(token, set_slug)
             has_live = any(p["price_source"] == "pricecharting" for p in products)
             return products, "pricecharting" if has_live else "no_data"
         except Exception:
             pass
 
     # No token — return catalog with no prices
+    catalog_products = SET_CATALOG[set_slug]["products"]
     products = []
-    for c in PRODUCT_CATALOG:
+    for c in catalog_products:
         products.append({
             "id": c["id"],
             "name": c["name"],
@@ -257,10 +427,18 @@ def get_products(token=None):
     return products, "no_token"
 
 
-def get_product_by_id(product_id, token=None):
-    """Find a single product by ID."""
-    all_products, _ = get_products(token)
-    for p in all_products:
-        if p["id"] == product_id:
-            return p
+def get_product_by_id(product_id, token=None, set_slug=None):
+    """Find a single product by ID, optionally within a specific set."""
+    if set_slug:
+        all_products, _ = get_products(token, set_slug)
+        for p in all_products:
+            if p["id"] == product_id:
+                return p
+    else:
+        # Search all sets
+        for slug in SET_ORDER:
+            all_products, _ = get_products(token, slug)
+            for p in all_products:
+                if p["id"] == product_id:
+                    return p
     return None

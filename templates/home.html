@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Phantasmal Flames - Sealed Product Prices{% endblock %}
+{% block title %}{{ set_name }} - PokePriceTracker{% endblock %}
 
 {% block content %}
 <div class="hero">
-    <h1>Mega Evolution — Phantasmal Flames</h1>
-    <p>Live sealed product prices from PriceCharting.</p>
+    <h1>PokePriceTracker</h1>
+    <p>Live sealed product prices for every modern Pokemon TCG set.</p>
     <div class="source-badge">
         {% if price_source == 'pricecharting' %}
         <span class="source live">Live prices from PriceCharting</span>
@@ -16,6 +16,20 @@
     </div>
 </div>
 
+<!-- Set Tabs -->
+<div class="tabs-wrapper">
+    <div class="tabs">
+        {% for s in sets %}
+        <a href="/set/{{ s.slug }}" class="tab {% if s.slug == current_set %}active{% endif %}">
+            <span class="tab-name">{{ s.name }}</span>
+            <span class="tab-series">{{ s.series }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<h2 class="set-heading">{{ set_series }} — {{ set_name }}</h2>
+
 {% if products %}
 <div class="products-grid">
     {% for p in products %}
@@ -25,7 +39,7 @@
         {% endif %}
 
         <div class="product-body">
-            <h2 class="product-name">{{ p.name }}</h2>
+            <h3 class="product-name">{{ p.name }}</h3>
             <p class="product-desc">{{ p.description }}</p>
 
             <div class="product-pricing">
@@ -54,7 +68,7 @@
 </div>
 
 <div class="comparison-section">
-    <h2>Price Comparison</h2>
+    <h2>Price Comparison — {{ set_name }}</h2>
     <div class="table-wrapper">
         <table class="comparison-table">
             <thead>
@@ -85,4 +99,3 @@
 </div>
 {% endif %}
 {% endblock %}
-
