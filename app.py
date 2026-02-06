@@ -1,142 +1,50 @@
 #!/usr/bin/env python3
 """
-Pop Counts - PSA Population Report Web App
-Browse PSA graded pricing data for WOTC-era Pokemon TCG sets.
+Pop Counts - Phantasmal Flames Sealed Product Tracker
+Track prices for booster boxes, bundles, and ETBs.
 """
 
 import os
 from flask import Flask, render_template, request, jsonify
 
-import poketrace
+import products
 
 app = Flask(__name__)
-
-# Cache sets in memory
-_all_sets_cache = None
-_wotc_sets_cache = None
-
-
-def get_api_key():
-    key = poketrace.load_api_key()
-    if not key:
-        raise RuntimeError(
-            "POKETRACE_API_KEY not configured. "
-            "Set it in .env or as an environment variable."
-        )
-    return key
-
-
-def get_all_sets():
-    """Fetch and cache all available sets."""
-    global _all_sets_cache
-    if _all_sets_cache is None:
-        api_key = get_api_key()
-        _all_sets_cache = poketrace.fetch_all_sets(api_key)
-    return _all_sets_cache
-
-
-def get_wotc_sets():
-    """Fetch and cache WOTC-era sets."""
-    global _wotc_sets_cache
-    if _wotc_sets_cache is None:
-        all_sets = get_all_sets()
-        _wotc_sets_cache = [s for s in all_sets if poketrace.is_wotc_set(s)]
-    return _wotc_sets_cache
 
 
 @app.route("/")
 def home():
-    """Home page - WOTC sets by default, all sets with filter."""
-    error = None
-    search = request.args.get("q", "").strip().lower()
-    show_all = request.args.get("all", "").strip() == "1"
+    """Home page - show all Phantasmal Flames products."""
+    all_products = products.get_products()
 
+    # Sort: booster box first, then ETBs, bundle, build & battle, pack
+    type_order = {"booster-box": 0, "etb": 1, "bundle": 2, "build-battle": 3, "pack": 4}
+    all_products.sort(key=lambda p: type_order.get(p["type"], 99))
+
+    # Find best value (lowest per-pack cost)
+    if all_products:
+        best = min(all_products, key=lambda p: p["per_pack"])
+        best_id = best["id"]
+    else:
+        best_id = None
+
+    return render_template("home.html", products=all_products, best_id=best_id)
+
+
+@app.route("/product/<product_id>")
+def product_detail(product_id):
+    """Detail page for a single product."""
+    product = products.get_product_by_id(product_id)
+    if not product:
+        return render_template("404.html"), 404
+    return render_template("product.html", product=product)
+
+
+@app.route("/api/products")
+def api_products():
+    """JSON endpoint for all products."""
     try:
-        if show_all:
-            sets = get_all_sets()
-        else:
-            sets = get_wotc_sets()
-    except Exception as e:
-        sets = []
-        error = str(e)
-
-    if search:
-        sets = [
-            s for s in sets
-            if search in s.get("name", "").lower()
-            or search in s.get("id", s.get("slug", "")).lower()
-        ]
-
-    return render_template(
-        "home.html",
-        sets=sets,
-        search=request.args.get("q", ""),
-        show_all=show_all,
-        error=error,
-    )
-
-
-@app.route("/set/<set_id>")
-def set_report(set_id):
-    """PSA pop report for a specific set (fast load, no detail calls)."""
-    error = None
-    cards_data = []
-    set_name = set_id
-
-    # Get set name from cache
-    try:
-        all_sets = get_all_sets()
-        for s in all_sets:
-            if s.get("id", s.get("slug", "")) == set_id:
-                set_name = s.get("name", set_id)
-                break
-    except Exception:
-        pass
-
-    # Fast card list (no individual detail fetches)
-    try:
-        api_key = get_api_key()
-        cards_data = poketrace.build_set_card_list(api_key, set_id)
-    except Exception as e:
-        error = str(e)
-
-    return render_template(
-        "report.html",
-        set_id=set_id,
-        set_name=set_name,
-        cards=cards_data,
-        error=error,
-    )
-
-
-@app.route("/api/card/<card_id>/prices")
-def api_card_prices(card_id):
-    """Fetch PSA graded prices for a single card (called via JS)."""
-    try:
-        api_key = get_api_key()
-        grades = poketrace.fetch_card_prices(api_key, card_id)
-        return jsonify(grades)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-
-@app.route("/api/sets")
-def api_sets():
-    """JSON endpoint for WOTC sets."""
-    try:
-        sets = get_wotc_sets()
-        return jsonify(sets)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-
-@app.route("/api/report/<set_id>")
-def api_report(set_id):
-    """JSON endpoint for a set's card list."""
-    try:
-        api_key = get_api_key()
-        cards_data = poketrace.build_set_card_list(api_key, set_id)
-        return jsonify(cards_data)
+        return jsonify(products.get_products())
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

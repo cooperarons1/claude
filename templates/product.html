@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ product.name }} - Phantasmal Flames{% endblock %}
+
+{% block content %}
+<a href="/" class="back-link">&larr; All Products</a>
+
+<div class="detail-layout">
+    <div class="detail-image">
+        <img src="{{ product.image }}" alt="{{ product.name }}" loading="lazy"
+             onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+    </div>
+
+    <div class="detail-info">
+        <span class="type-badge">{{ product.type|replace('-', ' ')|title }}</span>
+        <h1>{{ product.name }}</h1>
+        <p class="detail-desc">{{ product.description }}</p>
+
+        <div class="detail-pricing">
+            <div class="price-main">${{ "%.2f"|format(product.market_price) }}</div>
+            <div class="price-breakdown">
+                <div class="stat">
+                    <span class="stat-val">{{ product.packs }}</span>
+                    <span class="stat-label">Packs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-val">${{ "%.2f"|format(product.per_pack) }}</span>
+                    <span class="stat-label">Per Pack</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-links">
+            {% if product.pricecharting %}
+            <a href="{{ product.pricecharting }}" target="_blank" class="btn btn-price btn-lg">View Price History</a>
+            {% endif %}
+            {% for name, url in product.retailers.items() %}
+            <a href="{{ url }}" target="_blank" class="btn btn-retailer btn-lg">Buy on {{ name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

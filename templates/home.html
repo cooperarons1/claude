@@ -1,61 +1,77 @@
 {% extends "base.html" %}
-{% block title %}Pop Counts - WOTC Sets{% endblock %}
+{% block title %}Phantasmal Flames - Sealed Product Prices{% endblock %}
 
 {% block content %}
 <div class="hero">
-    <h1>WOTC Pokemon Pop Reports</h1>
-    <p>PSA graded pricing data for Wizards of the Coast era sets (1999-2003).</p>
+    <h1>Mega Evolution — Phantasmal Flames</h1>
+    <p>Track market prices for booster boxes, ETBs, bundles, and more.</p>
 </div>
 
-<form class="search-bar" method="get" action="/">
-    <input
-        type="text"
-        name="q"
-        value="{{ search }}"
-        placeholder="Search sets (e.g. Base Set, Jungle, Neo Genesis...)"
-        autofocus
-    >
-    {% if show_all %}
-    <input type="hidden" name="all" value="1">
-    {% endif %}
-    <button type="submit">Search</button>
-    {% if search %}
-    <a href="/?{% if show_all %}all=1{% endif %}" class="btn-clear">Clear</a>
-    {% endif %}
-</form>
-
-<div class="filter-tabs">
-    <a href="/" class="tab {% if not show_all %}active{% endif %}">WOTC Sets</a>
-    <a href="/?all=1" class="tab {% if show_all %}active{% endif %}">All Sets</a>
-</div>
-
-{% if sets %}
-<div class="sets-grid">
-    {% for s in sets %}
-    <a href="/set/{{ s.get('id', s.get('slug', '')) }}" class="set-card">
-        {% if s.get('images', {}).get('logo') or s.get('logo') %}
-        <img
-            src="{{ s.get('images', {}).get('logo', s.get('logo', '')) }}"
-            alt="{{ s.get('name', 'Set') }}"
-            class="set-logo"
-            loading="lazy"
-        >
+{% if products %}
+<div class="products-grid">
+    {% for p in products %}
+    <div class="product-card {% if p.id == best_id %}best-value{% endif %}">
+        {% if p.id == best_id %}
+        <span class="badge badge-value">Best Value</span>
         {% endif %}
-        <div class="set-info">
-            <h3>{{ s.get('name', 'Unknown Set') }}</h3>
-            {% if s.get('releaseDate') or s.get('release_date') %}
-            <span class="set-date">{{ s.get('releaseDate', s.get('release_date', '')) }}</span>
-            {% endif %}
-            {% if s.get('total') or s.get('totalCards') %}
-            <span class="set-count">{{ s.get('total', s.get('totalCards', '')) }} cards</span>
-            {% endif %}
+
+        <div class="product-image">
+            <img src="{{ p.image }}" alt="{{ p.name }}" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
         </div>
-    </a>
+
+        <div class="product-body">
+            <h2 class="product-name">{{ p.name }}</h2>
+            <p class="product-desc">{{ p.description }}</p>
+
+            <div class="product-pricing">
+                <div class="price-main">${{ "%.2f"|format(p.market_price) }}</div>
+                <div class="price-meta">
+                    <span class="price-perpk">${{ "%.2f"|format(p.per_pack) }} / pack</span>
+                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
+                </div>
+            </div>
+
+            <div class="product-links">
+                {% if p.pricecharting %}
+                <a href="{{ p.pricecharting }}" target="_blank" class="btn btn-price">Price History</a>
+                {% endif %}
+                {% for name, url in p.retailers.items() %}
+                <a href="{{ url }}" target="_blank" class="btn btn-retailer">{{ name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     {% endfor %}
 </div>
-{% elif not error %}
-<div class="empty-state">
-    <p>No sets found{% if search %} matching "{{ search }}"{% endif %}.</p>
+
+<div class="comparison-section">
+    <h2>Price Comparison</h2>
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Packs</th>
+                    <th>Per Pack</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in products %}
+                <tr {% if p.id == best_id %}class="highlight"{% endif %}>
+                    <td class="col-name">
+                        {{ p.name }}
+                        {% if p.id == best_id %}<span class="badge-inline">Best</span>{% endif %}
+                    </td>
+                    <td class="col-price">${{ "%.2f"|format(p.market_price) }}</td>
+                    <td class="col-packs">{{ p.packs }}</td>
+                    <td class="col-perpk">${{ "%.2f"|format(p.per_pack) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 {% endif %}
 {% endblock %}

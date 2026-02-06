@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Pop Counts{% endblock %}</title>
+    <title>{% block title %}Phantasmal Flames Price Tracker{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <nav class="navbar">
-        <a href="/" class="nav-brand">
-            <span class="logo">📊</span> Pop Counts
-        </a>
-        <span class="nav-tagline">PSA Population Reports</span>
+        <a href="/" class="nav-brand">Phantasmal Flames</a>
+        <span class="nav-tagline">Sealed Product Price Tracker</span>
     </nav>
 
     <main class="container">
-        {% if error %}
-        <div class="alert alert-error">{{ error }}</div>
-        {% endif %}
-
         {% block content %}{% endblock %}
     </main>
 
     <footer class="footer">
-        <p>Data provided by <a href="https://poketrace.com" target="_blank">Poketrace API</a></p>
+        <p>Prices based on recent market sales. Not affiliated with The Pokemon Company.</p>
     </footer>
 
     {% block scripts %}{% endblock %}
