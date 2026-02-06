@@ -19,11 +19,12 @@ PC_BASE = "https://www.pricecharting.com"
 
 def _std_products(set_prefix, set_name, series=""):
     """Generate standard sealed product entries for a set."""
-    label = f"{series} — {set_name}" if series else set_name
+    display = set_name.title()
+    label = f"{series} — {display}" if series else display
     return [
         {
             "id": f"{set_prefix}-booster-box",
-            "search": [f"{set_name} booster box"],
+            "search": [f"pokemon {set_name} booster box", f"{set_name} booster box"],
             "name": "Booster Box",
             "description": f"36 booster packs of {label}.",
             "packs": 36,
@@ -31,15 +32,15 @@ def _std_products(set_prefix, set_name, series=""):
         },
         {
             "id": f"{set_prefix}-etb",
-            "search": [f"{set_name} elite trainer box"],
+            "search": [f"pokemon {set_name} elite trainer box", f"{set_name} elite trainer box"],
             "name": "Elite Trainer Box",
-            "description": f"{set_name} ETB with 9 booster packs, energy cards, dice, and storage box.",
+            "description": f"{display} ETB with 9 booster packs, energy cards, dice, and storage box.",
             "packs": 9,
             "type": "etb",
         },
         {
             "id": f"{set_prefix}-bundle",
-            "search": [f"{set_name} booster bundle", f"{set_name} bundle"],
+            "search": [f"pokemon {set_name} booster bundle", f"{set_name} booster bundle"],
             "name": "Booster Bundle",
             "description": f"6 booster packs of {label}.",
             "packs": 6,
@@ -47,15 +48,15 @@ def _std_products(set_prefix, set_name, series=""):
         },
         {
             "id": f"{set_prefix}-build-battle",
-            "search": [f"{set_name} build and battle", f"{set_name} build battle"],
+            "search": [f"pokemon {set_name} build and battle", f"{set_name} build battle"],
             "name": "Build & Battle Box",
-            "description": f"Pre-release kit with 4 booster packs and promo card.",
+            "description": "Pre-release kit with 4 booster packs and promo card.",
             "packs": 4,
             "type": "build-battle",
         },
         {
             "id": f"{set_prefix}-booster-pack",
-            "search": [f"{set_name} booster pack", f"{set_name} pack"],
+            "search": [f"pokemon {set_name} booster pack", f"{set_name} booster pack"],
             "name": "Booster Pack",
             "description": "Single booster pack with 10 cards.",
             "packs": 1,
