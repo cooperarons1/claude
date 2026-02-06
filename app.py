@@ -68,9 +68,41 @@ def api_products(set_slug="phantasmal-flames"):
         return jsonify({"error": str(e)}), 500
 
 
+def _build_price_context():
+    """Fetch live prices for all sets and format as context for Claude."""
+    token = products.load_api_token()
+    if not token:
+        return "No live pricing data available (no API token)."
+
+    lines = ["LIVE PRICING DATA FROM PRICECHARTING:"]
+    for set_info in products.get_set_list():
+        slug = set_info["slug"]
+        try:
+            prods, source = products.get_products(token, slug)
+        except Exception:
+            continue
+
+        priced = [p for p in prods if p.get("market_price")]
+        if not priced:
+            continue
+
+        lines.append(f"\n{set_info['series']} — {set_info['name']}:")
+        for p in priced:
+            per_pack = f" (${p['per_pack']:.2f}/pack)" if p.get("per_pack") else ""
+            lines.append(f"  {p['name']}: ${p['market_price']:.2f} — {p['packs']} packs{per_pack}")
+
+        # Note best value
+        priced_with_pp = [p for p in priced if p.get("per_pack") and p["per_pack"] > 0]
+        if priced_with_pp:
+            best = min(priced_with_pp, key=lambda p: p["per_pack"])
+            lines.append(f"  -> Best value: {best['name']} at ${best['per_pack']:.2f}/pack")
+
+    return "\n".join(lines)
+
+
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
-    """Chat endpoint — proxy to Claude API."""
+    """Chat endpoint — proxy to Claude API with live price context."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         return jsonify({"error": "No ANTHROPIC_API_KEY configured"}), 500
@@ -88,15 +120,17 @@ def api_chat():
         messages.append({"role": h["role"], "content": h["content"]})
     messages.append({"role": "user", "content": user_msg})
 
+    # Fetch live pricing data to give Claude real context
+    price_context = _build_price_context()
+
     system_prompt = (
         "You are a helpful Pokemon TCG pricing assistant on PokePriceTracker. "
         "You help users understand sealed product prices, find the best deals, "
         "and answer questions about Pokemon TCG sets and products. "
         "Keep responses concise and friendly. Use dollar amounts when discussing prices. "
-        "You know about modern Pokemon TCG sets including Mega Evolution era "
-        "(Phantasmal Flames, Ascended Heroes) and Scarlet & Violet era sets. "
-        "If asked about specific current prices, remind users to check the set tabs on the site "
-        "for live PriceCharting data."
+        "You have access to LIVE pricing data below — use it to answer questions accurately. "
+        "You can compare prices across sets, identify best deals, and give buying advice.\n\n"
+        f"{price_context}"
     )
 
     try:
