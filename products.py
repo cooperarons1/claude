@@ -123,7 +123,32 @@ SET_CATALOG = {
     "ascended-heroes": {
         "name": "Ascended Heroes",
         "series": "Mega Evolution",
-        "products": _std_products("ah", "ascended heroes", "Mega Evolution"),
+        "products": [
+            {
+                "id": "ah-etb",
+                "search": ["ascended heroes elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Ascended Heroes ETB with 9 booster packs, energy cards, dice, and storage box.",
+                "packs": 9,
+                "type": "etb",
+            },
+            {
+                "id": "ah-bundle",
+                "search": ["ascended heroes booster bundle", "ascended heroes bundle"],
+                "name": "Booster Bundle",
+                "description": "6 booster packs of Mega Evolution — Ascended Heroes.",
+                "packs": 6,
+                "type": "bundle",
+            },
+            {
+                "id": "ah-booster-pack",
+                "search": ["ascended heroes booster pack", "ascended heroes pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
     },
     "prismatic-evolutions": {
         "name": "Prismatic Evolutions",

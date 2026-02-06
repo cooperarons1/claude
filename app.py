@@ -18,15 +18,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    """Home page — redirect to default set."""
-    return set_page("phantasmal-flames")
+    """Home page — browse all sets."""
+    sets = products.get_set_list()
+    return render_template("home.html", sets=sets)
 
 
 @app.route("/set/<set_slug>")
 def set_page(set_slug):
     """Show all products for a given set with live prices."""
     if set_slug not in products.SET_CATALOG:
-        return render_template("404.html", sets=products.get_set_list()), 404
+        return render_template("404.html"), 404
 
     try:
         token = products.load_api_token()
@@ -42,7 +43,7 @@ def set_page(set_slug):
         set_info = products.SET_CATALOG[set_slug]
 
         return render_template(
-            "home.html",
+            "set.html",
             products=all_products,
             best_id=best_id,
             price_source=price_source,

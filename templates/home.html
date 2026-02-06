@@ -1,101 +1,60 @@
 {% extends "base.html" %}
-{% block title %}{{ set_name }} - PokePriceTracker{% endblock %}
+{% block title %}PokePriceTracker — Pokemon TCG Sealed Product Prices{% endblock %}
 
 {% block content %}
-<div class="hero">
+<div class="home-hero">
     <h1>PokePriceTracker</h1>
-    <p>Live sealed product prices for every modern Pokemon TCG set.</p>
-    <div class="source-badge">
-        {% if price_source == 'pricecharting' %}
-        <span class="source live">Live prices from PriceCharting</span>
-        {% elif price_source == 'no_token' %}
-        <span class="source fallback">No API token — add PRICECHARTING_TOKEN to env</span>
-        {% else %}
-        <span class="source fallback">No pricing data found</span>
-        {% endif %}
-    </div>
+    <p class="home-subtitle">Live sealed product prices for modern Pokemon TCG sets</p>
+    <p class="home-desc">Compare booster boxes, ETBs, bundles, and more across every set. Powered by PriceCharting.</p>
 </div>
 
-<!-- Set Tabs -->
-<div class="tabs-wrapper">
-    <div class="tabs">
-        {% for s in sets %}
-        <a href="/set/{{ s.slug }}" class="tab {% if s.slug == current_set %}active{% endif %}">
-            <span class="tab-name">{{ s.name }}</span>
-            <span class="tab-series">{{ s.series }}</span>
+<div class="sets-section">
+    <h2 class="section-title">Mega Evolution</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Mega Evolution" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
+            </div>
         </a>
         {% endfor %}
     </div>
 </div>
 
-<h2 class="set-heading">{{ set_series }} — {{ set_name }}</h2>
-
-{% if products %}
-<div class="products-grid">
-    {% for p in products %}
-    <div class="product-card {% if p.id == best_id %}best-value{% endif %}">
-        {% if p.id == best_id and p.market_price %}
-        <span class="badge badge-value">Best Value</span>
-        {% endif %}
-
-        <div class="product-body">
-            <h3 class="product-name">{{ p.name }}</h3>
-            <p class="product-desc">{{ p.description }}</p>
-
-            <div class="product-pricing">
-                {% if p.market_price %}
-                <div class="price-main">${{ "%.2f"|format(p.market_price) }}</div>
-                <div class="price-meta">
-                    <span class="price-perpk">${{ "%.2f"|format(p.per_pack) }} / pack</span>
-                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
-                </div>
-                {% else %}
-                <div class="price-main price-na">No price data</div>
-                <div class="price-meta">
-                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
-                </div>
-                {% endif %}
+<div class="sets-section">
+    <h2 class="section-title">Scarlet & Violet</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Scarlet & Violet" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent sv"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
             </div>
-
-            {% if p.pc_url %}
-            <div class="product-links">
-                <a href="{{ p.pc_url }}" target="_blank" class="btn btn-price">PriceCharting</a>
-            </div>
-            {% endif %}
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="comparison-section">
-    <h2>Price Comparison — {{ set_name }}</h2>
-    <div class="table-wrapper">
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Sealed Price</th>
-                    <th>Packs</th>
-                    <th>Per Pack</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for p in products %}
-                {% if p.market_price %}
-                <tr {% if p.id == best_id %}class="highlight"{% endif %}>
-                    <td class="col-name">
-                        {{ p.name }}
-                        {% if p.id == best_id %}<span class="badge-inline">Best</span>{% endif %}
-                    </td>
-                    <td class="col-price">${{ "%.2f"|format(p.market_price) }}</td>
-                    <td class="col-packs">{{ p.packs }}</td>
-                    <td class="col-perpk">${{ "%.2f"|format(p.per_pack) }}</td>
-                </tr>
-                {% endif %}
-                {% endfor %}
-            </tbody>
-        </table>
+        </a>
+        {% endfor %}
     </div>
 </div>
-{% endif %}
+
+<div class="home-features">
+    <div class="feature">
+        <div class="feature-icon">$</div>
+        <h3>Live Prices</h3>
+        <p>Real-time market data from PriceCharting for sealed Pokemon TCG products.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">/pk</div>
+        <h3>Per-Pack Value</h3>
+        <p>Instantly see the cost per pack to find the best deal on every set.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">AI</div>
+        <h3>Claude Assistant</h3>
+        <p>Ask Claude Opus 4.6 anything about Pokemon TCG pricing and products.</p>
+    </div>
+</div>
 {% endblock %}
