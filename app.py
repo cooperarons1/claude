@@ -4,7 +4,6 @@ Pop Counts - PSA Population Report Web App
 Browse PSA graded pricing data for WOTC-era Pokemon TCG sets.
 """
 
-import json
 import os
 from flask import Flask, render_template, request, jsonify
 
@@ -57,7 +56,7 @@ def home():
             sets = get_all_sets()
         else:
             sets = get_wotc_sets()
-    except RuntimeError as e:
+    except Exception as e:
         sets = []
         error = str(e)
 
@@ -79,19 +78,27 @@ def home():
 
 @app.route("/set/<set_id>")
 def set_report(set_id):
-    """PSA pop report for a specific set."""
+    """PSA pop report for a specific set (fast load, no detail calls)."""
     error = None
     cards_data = []
-    set_info = None
+    set_name = set_id
 
+    # Get set name from cache
+    try:
+        all_sets = get_all_sets()
+        for s in all_sets:
+            if s.get("id", s.get("slug", "")) == set_id:
+                set_name = s.get("name", set_id)
+                break
+    except Exception:
+        pass
+
+    # Fast card list (no individual detail fetches)
     try:
         api_key = get_api_key()
-        set_info = poketrace.find_set_by_id(api_key, set_id)
-        cards_data = poketrace.build_set_report(api_key, set_id)
-    except RuntimeError as e:
+        cards_data = poketrace.build_set_card_list(api_key, set_id)
+    except Exception as e:
         error = str(e)
-
-    set_name = set_info.get("name", set_id) if set_info else set_id
 
     return render_template(
         "report.html",
@@ -102,24 +109,35 @@ def set_report(set_id):
     )
 
 
+@app.route("/api/card/<card_id>/prices")
+def api_card_prices(card_id):
+    """Fetch PSA graded prices for a single card (called via JS)."""
+    try:
+        api_key = get_api_key()
+        grades = poketrace.fetch_card_prices(api_key, card_id)
+        return jsonify(grades)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route("/api/sets")
 def api_sets():
     """JSON endpoint for WOTC sets."""
     try:
         sets = get_wotc_sets()
         return jsonify(sets)
-    except RuntimeError as e:
+    except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 
 @app.route("/api/report/<set_id>")
 def api_report(set_id):
-    """JSON endpoint for a set's pop report."""
+    """JSON endpoint for a set's card list."""
     try:
         api_key = get_api_key()
-        cards_data = poketrace.build_set_report(api_key, set_id)
+        cards_data = poketrace.build_set_card_list(api_key, set_id)
         return jsonify(cards_data)
-    except RuntimeError as e:
+    except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 

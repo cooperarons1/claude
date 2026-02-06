@@ -208,10 +208,10 @@ def extract_psa_grades(card_data):
     return grades
 
 
-def build_set_report(api_key, set_id):
-    """Build a full PSA pop report for a given set.
+def build_set_card_list(api_key, set_id):
+    """Build a card list for a set (fast, no individual detail calls).
 
-    Returns a list of dicts with card info and PSA grades.
+    Returns a list of dicts with basic card info from the list endpoint.
     """
     cards = fetch_set_cards(api_key, set_id)
     if not cards:
@@ -235,14 +235,8 @@ def build_set_report(api_key, set_id):
         except (ValueError, IndexError):
             sort_num = 999
 
-        # Fetch detail for graded pricing
-        psa_grades = {}
-        if card_id:
-            try:
-                detail = fetch_card_detail(api_key, card_id)
-                psa_grades = extract_psa_grades(detail)
-            except RuntimeError:
-                pass
+        # Extract any graded prices already in the list response
+        psa_grades = extract_psa_grades(card)
 
         cards_data.append({
             "id": card_id,
@@ -257,7 +251,14 @@ def build_set_report(api_key, set_id):
             "psa_grades": psa_grades,
         })
 
-        time.sleep(0.3)
-
     cards_data.sort(key=lambda c: c["sort_num"])
     return cards_data
+
+
+def fetch_card_prices(api_key, card_id):
+    """Fetch PSA graded prices for a single card (for async loading)."""
+    try:
+        detail = fetch_card_detail(api_key, card_id)
+        return extract_psa_grades(detail)
+    except Exception:
+        return {}

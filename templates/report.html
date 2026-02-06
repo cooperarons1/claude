@@ -16,10 +16,13 @@
         placeholder="Filter cards by name or number..."
         class="filter-input"
     >
+    <button id="load-prices" class="btn-load">Load PSA Prices</button>
     <label class="toggle-label">
         <input type="checkbox" id="toggle-images"> Show images
     </label>
 </div>
+
+<div id="price-status" class="price-status hidden"></div>
 
 <div class="table-wrapper">
     <table class="pop-table">
@@ -36,7 +39,7 @@
         </thead>
         <tbody>
             {% for card in cards %}
-            <tr data-name="{{ card.name|lower }}" data-num="{{ card.number }}">
+            <tr data-name="{{ card.name|lower }}" data-num="{{ card.number }}" data-id="{{ card.id }}">
                 <td class="col-img hidden" data-img>
                     {% if card.image %}
                     <img src="{{ card.image }}" alt="{{ card.name }}" class="card-thumb" loading="lazy">
@@ -48,13 +51,9 @@
                 <td class="col-name">{{ card.name }}</td>
                 <td class="col-rarity">{{ card.rarity or '--' }}</td>
                 {% for g in range(1, 11) %}
-                <td class="col-grade {% if card.psa_grades.get(g) %}has-value{% endif %}">
+                <td class="col-grade grade-cell" data-grade="{{ g }}">
                     {% if card.psa_grades.get(g) is not none %}
-                        {% if card.psa_grades.get(g) is number %}
-                            ${{ "%.2f"|format(card.psa_grades.get(g)) }}
-                        {% else %}
-                            {{ card.psa_grades.get(g) }}
-                        {% endif %}
+                        <span class="has-value">${{ "%.2f"|format(card.psa_grades.get(g)) }}</span>
                     {% else %}
                         <span class="empty">--</span>
                     {% endif %}
@@ -75,17 +74,19 @@
 {% block scripts %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const filter = document.getElementById('card-filter');
-    const toggle = document.getElementById('toggle-images');
-    const rows = document.querySelectorAll('.pop-table tbody tr');
-    const imgCells = document.querySelectorAll('[data-img]');
+    var filter = document.getElementById('card-filter');
+    var toggle = document.getElementById('toggle-images');
+    var loadBtn = document.getElementById('load-prices');
+    var status = document.getElementById('price-status');
+    var rows = document.querySelectorAll('.pop-table tbody tr');
+    var imgCells = document.querySelectorAll('[data-img]');
 
     if (filter) {
         filter.addEventListener('input', function() {
-            const q = this.value.toLowerCase();
+            var q = this.value.toLowerCase();
             rows.forEach(function(row) {
-                const name = row.getAttribute('data-name') || '';
-                const num = row.getAttribute('data-num') || '';
+                var name = row.getAttribute('data-name') || '';
+                var num = row.getAttribute('data-num') || '';
                 row.style.display = (name.includes(q) || num.includes(q)) ? '' : 'none';
             });
         });
@@ -96,6 +97,59 @@ document.addEventListener('DOMContentLoaded', function() {
             imgCells.forEach(function(cell) {
                 cell.classList.toggle('hidden', !toggle.checked);
             });
+        });
+    }
+
+    if (loadBtn) {
+        loadBtn.addEventListener('click', function() {
+            loadBtn.disabled = true;
+            loadBtn.textContent = 'Loading...';
+            status.classList.remove('hidden');
+            status.textContent = 'Fetching PSA prices... this may take a moment.';
+
+            var cardRows = Array.from(rows);
+            var idx = 0;
+            var total = cardRows.length;
+
+            function loadNext() {
+                if (idx >= total) {
+                    status.textContent = 'All prices loaded!';
+                    loadBtn.textContent = 'Prices Loaded';
+                    setTimeout(function() { status.classList.add('hidden'); }, 3000);
+                    return;
+                }
+
+                var row = cardRows[idx];
+                var cardId = row.getAttribute('data-id');
+                idx++;
+
+                status.textContent = 'Loading prices... ' + idx + '/' + total;
+
+                if (!cardId) {
+                    loadNext();
+                    return;
+                }
+
+                fetch('/api/card/' + encodeURIComponent(cardId) + '/prices')
+                    .then(function(r) { return r.json(); })
+                    .then(function(grades) {
+                        if (!grades.error) {
+                            for (var g = 1; g <= 10; g++) {
+                                var cell = row.querySelector('[data-grade="' + g + '"]');
+                                if (cell && grades[g] !== undefined && grades[g] !== null) {
+                                    var val = parseFloat(grades[g]);
+                                    cell.innerHTML = '<span class="has-value">$' + val.toFixed(2) + '</span>';
+                                }
+                            }
+                        }
+                        setTimeout(loadNext, 100);
+                    })
+                    .catch(function() {
+                        setTimeout(loadNext, 100);
+                    });
+            }
+
+            loadNext();
         });
     }
 });

@@ -237,6 +237,32 @@ a:hover {
     font-size: 0.95rem;
 }
 
+/* ===== Load Button & Status ===== */
+.btn-load {
+    padding: 8px 18px;
+    background: var(--green);
+    color: #000;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-load:hover { opacity: 0.85; }
+.btn-load:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.price-status {
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    border-radius: var(--radius);
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
 /* ===== Table Controls ===== */
 .table-controls {
     display: flex;
