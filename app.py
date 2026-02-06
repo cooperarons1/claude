@@ -12,6 +12,7 @@ import urllib.parse
 from flask import Flask, render_template, jsonify, request
 
 import products
+import vendnovation
 
 app = Flask(__name__)
 
@@ -158,6 +159,79 @@ def api_chat():
     except urllib.error.HTTPError as e:
         body = e.read().decode() if e.fp else ""
         return jsonify({"error": f"Claude API error: {e.code}", "detail": body}), 502
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# ---- VendNovation Vending Machine Dashboard ----
+
+@app.route("/vending")
+def vending_dashboard():
+    """Vending machine dashboard — overview of all machines."""
+    data = vendnovation.get_dashboard_data()
+    configured = data is not None
+    return render_template(
+        "vending.html",
+        configured=configured,
+        machines=data["machines"] if data else [],
+        sites=data["sites"] if data else [],
+        alerts=data["alerts"] if data else [],
+        products=data["products"] if data else [],
+        selections=data["selections"] if data else [],
+    )
+
+
+@app.route("/vending/machine/<int:machine_id>")
+def vending_machine(machine_id):
+    """Detail page for a single vending machine."""
+    data = vendnovation.get_machine_detail(machine_id)
+    if not data or not data["machine"]:
+        return render_template("404.html"), 404
+    return render_template(
+        "vending_machine.html",
+        machine=data["machine"],
+        selections=data["selections"],
+        alerts=data["alerts"],
+    )
+
+
+@app.route("/api/vending/machines")
+def api_vending_machines():
+    """JSON endpoint for vending machines."""
+    try:
+        api_key, token = vendnovation.get_auth_token()
+        if not api_key:
+            return jsonify({"error": "VendNovation not configured"}), 500
+        machines = vendnovation.get_machines(api_key, token)
+        return jsonify({"machines": machines})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/vending/transactions")
+def api_vending_transactions():
+    """JSON endpoint for recent transactions."""
+    try:
+        api_key, token = vendnovation.get_auth_token()
+        if not api_key:
+            return jsonify({"error": "VendNovation not configured"}), 500
+        start = request.args.get("start")
+        end = request.args.get("end")
+        txns = vendnovation.get_transactions(api_key, token, start_date=start, end_date=end)
+        return jsonify({"transactions": txns})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/vending/alerts")
+def api_vending_alerts():
+    """JSON endpoint for machine alerts."""
+    try:
+        api_key, token = vendnovation.get_auth_token()
+        if not api_key:
+            return jsonify({"error": "VendNovation not configured"}), 500
+        alerts = vendnovation.get_alerts(api_key, token)
+        return jsonify({"alerts": alerts})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

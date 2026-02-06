@@ -744,6 +744,289 @@ a:hover { color: var(--accent-hover); }
     margin-top: 40px;
 }
 
+/* ===== Vending Dashboard ===== */
+.vending-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.vending-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.vending-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card.stat-alert {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+.stat-card.stat-alert .stat-value {
+    color: var(--red);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.vending-section {
+    margin-bottom: 36px;
+}
+
+/* Alerts */
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.alert-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.85rem;
+}
+
+.alert-badge {
+    background: var(--red);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.alert-text {
+    flex: 1;
+    color: var(--text);
+}
+
+.alert-time {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* Machines grid */
+.machines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+}
+
+.machine-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.machine-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    color: var(--text);
+}
+
+.machine-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--bg-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.machine-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.machine-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.machine-site,
+.machine-model {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Setup card */
+.vending-setup {
+    margin: 24px 0;
+}
+
+.setup-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+
+.setup-card h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.setup-card > p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+.setup-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.setup-step {
+    display: flex;
+    gap: 16px;
+}
+
+.step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.step-content code {
+    background: var(--bg-hover);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.env-block {
+    margin-top: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    line-height: 1.8;
+    color: var(--green);
+    overflow-x: auto;
+}
+
+.env-block code {
+    background: none;
+    padding: 0;
+    color: var(--green);
+}
+
+/* Status indicators */
+.status-active {
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-inactive {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.col-muted {
+    color: var(--text-muted);
+}
+
+.highlight-alert {
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.highlight-alert:hover {
+    background: rgba(239, 68, 68, 0.14);
+}
+
+/* Nav vending link */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .container { padding: 16px; }
@@ -760,4 +1043,8 @@ a:hover { color: var(--accent-hover); }
         right: 16px;
         bottom: 88px;
     }
+    .vending-stats { grid-template-columns: repeat(2, 1fr); }
+    .machines-grid { grid-template-columns: 1fr; }
+    .setup-step { flex-direction: column; gap: 8px; }
+    .nav-tagline { display: none; }
 }

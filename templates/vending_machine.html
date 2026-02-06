@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}{{ machine.name|default('Machine') }} — Vending Dashboard{% endblock %}
+
+{% block content %}
+<a href="/vending" class="back-link">&larr; All Machines</a>
+
+<div class="vending-header">
+    <h1 class="vending-title">{{ machine.name|default('Machine ' ~ machine.id|default('?')) }}</h1>
+    <span class="set-series-label">VendNovation</span>
+</div>
+
+<!-- Machine Info -->
+<div class="vending-stats">
+    {% if machine.siteId %}
+    <div class="stat-card">
+        <div class="stat-value">{{ machine.siteName|default(machine.siteId) }}</div>
+        <div class="stat-label">Site</div>
+    </div>
+    {% endif %}
+    {% if machine.modelNumber %}
+    <div class="stat-card">
+        <div class="stat-value">{{ machine.modelNumber }}</div>
+        <div class="stat-label">Model</div>
+    </div>
+    {% endif %}
+    <div class="stat-card">
+        <div class="stat-value">{{ selections|length }}</div>
+        <div class="stat-label">Selections</div>
+    </div>
+    <div class="stat-card stat-alert">
+        <div class="stat-value">{{ alerts|length }}</div>
+        <div class="stat-label">Alerts</div>
+    </div>
+</div>
+
+<!-- Alerts -->
+{% if alerts %}
+<div class="vending-section">
+    <h2 class="section-title">Alerts</h2>
+    <div class="alerts-list">
+        {% for alert in alerts %}
+        <div class="alert-item">
+            <span class="alert-badge">Alert</span>
+            <span class="alert-text">
+                {% if alert.code %}{{ alert.code }}{% endif %}
+                {% if alert.message %}: {{ alert.message }}{% endif %}
+            </span>
+            {% if alert.raisedAt %}
+            <span class="alert-time">{{ alert.raisedAt }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Selections / Inventory -->
+{% if selections %}
+<div class="vending-section">
+    <h2 class="section-title">Inventory (Selections)</h2>
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Count</th>
+                    <th>Restock To</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sel in selections %}
+                <tr {% if sel.count is defined and sel.alertLevel is defined and sel.count <= sel.alertLevel %}class="highlight-alert"{% endif %}>
+                    <td class="col-name">{{ sel.selectionNumber|default(sel.friendlyNumber|default('—')) }}</td>
+                    <td>{{ sel.productName|default(sel.productId|default('—')) }}</td>
+                    <td class="col-price">
+                        {% if sel.price is defined and sel.price is not none %}
+                        ${{ "%.2f"|format(sel.price) }}
+                        {% else %}—{% endif %}
+                    </td>
+                    <td class="col-packs">{{ sel.count|default('—') }}</td>
+                    <td class="col-packs">{{ sel.restockTo|default(sel.par|default('—')) }}</td>
+                    <td>
+                        {% if sel.isActive is defined %}
+                            {% if sel.isActive %}<span class="status-active">Active</span>
+                            {% else %}<span class="status-inactive">Inactive</span>{% endif %}
+                        {% else %}—{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+{% if not selections and not alerts %}
+<div class="empty-state">
+    <h1>No Data</h1>
+    <p>No inventory or alert data found for this machine.</p>
+</div>
+{% endif %}
+{% endblock %}

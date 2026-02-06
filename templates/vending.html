@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% block title %}Vending Dashboard — PokePriceTracker{% endblock %}
+
+{% block content %}
+<div class="vending-header">
+    <h1 class="vending-title">Vending Dashboard</h1>
+    <span class="set-series-label">VendNovation</span>
+    {% if configured %}
+    <span class="source live">Connected</span>
+    {% else %}
+    <span class="source fallback">Not Configured</span>
+    {% endif %}
+</div>
+
+{% if not configured %}
+<div class="vending-setup">
+    <div class="setup-card">
+        <h2>Set Up VendNovation</h2>
+        <p>Connect your VendNovation account to monitor vending machines, inventory, and sales.</p>
+
+        <div class="setup-steps">
+            <div class="setup-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Get API Access</h3>
+                    <p>Email <strong>api-request@vendnovation.com</strong> with your Organization Name and login email. They'll send your API key.</p>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Create an API User</h3>
+                    <p>In VendNovation, create a user for API access (e.g. <code>api@yourorg.com</code>) with a strong password.</p>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Add Environment Variables</h3>
+                    <p>Add these to your Render dashboard (or <code>.env</code> file):</p>
+                    <div class="env-block">
+                        <code>VENDNOVATION_API_KEY=your_aws_api_gateway_key</code><br>
+                        <code>VENDNOVATION_USERNAME=api@yourorg.com</code><br>
+                        <code>VENDNOVATION_PASSWORD=your_password</code>
+                    </div>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h3>Redeploy</h3>
+                    <p>Restart your app and refresh this page. Your machines will appear below.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<!-- Stats Summary -->
+<div class="vending-stats">
+    <div class="stat-card">
+        <div class="stat-value">{{ machines|length }}</div>
+        <div class="stat-label">Machines</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ sites|length }}</div>
+        <div class="stat-label">Sites</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ products|length }}</div>
+        <div class="stat-label">Products</div>
+    </div>
+    <div class="stat-card stat-alert">
+        <div class="stat-value">{{ alerts|length }}</div>
+        <div class="stat-label">Active Alerts</div>
+    </div>
+</div>
+
+<!-- Alerts -->
+{% if alerts %}
+<div class="vending-section">
+    <h2 class="section-title">Active Alerts</h2>
+    <div class="alerts-list">
+        {% for alert in alerts[:10] %}
+        <div class="alert-item">
+            <span class="alert-badge">Alert</span>
+            <span class="alert-text">
+                Machine {{ alert.machineId|default('?') }}
+                {% if alert.code %} — {{ alert.code }}{% endif %}
+                {% if alert.message %}: {{ alert.message }}{% endif %}
+            </span>
+            {% if alert.raisedAt %}
+            <span class="alert-time">{{ alert.raisedAt }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Machines -->
+{% if machines %}
+<div class="vending-section">
+    <h2 class="section-title">Machines</h2>
+    <div class="machines-grid">
+        {% for m in machines %}
+        <a href="/vending/machine/{{ m.id|default(m.machineId|default(0)) }}" class="machine-card">
+            <div class="machine-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><rect x="7" y="5" width="10" height="8" rx="1"/><circle cx="9" cy="17" r="1"/><circle cx="12" cy="17" r="1"/><circle cx="15" cy="17" r="1"/></svg>
+            </div>
+            <div class="machine-info">
+                <h3 class="machine-name">{{ m.name|default('Machine ' ~ m.id|default('?')) }}</h3>
+                {% if m.siteName or m.siteId %}
+                <span class="machine-site">Site: {{ m.siteName|default(m.siteId|default('—')) }}</span>
+                {% endif %}
+                {% if m.modelNumber %}
+                <span class="machine-model">Model: {{ m.modelNumber }}</span>
+                {% endif %}
+            </div>
+            <span class="set-card-cta">Details &rarr;</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Sites -->
+{% if sites %}
+<div class="vending-section">
+    <h2 class="section-title">Sites</h2>
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Site Name</th>
+                    <th>ID</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in sites %}
+                <tr>
+                    <td class="col-name">{{ s.name|default('Site ' ~ s.id|default('?')) }}</td>
+                    <td>{{ s.id|default('—') }}</td>
+                    <td class="col-muted">{{ s.address|default(s.city|default('—')) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+<!-- Products Catalog -->
+{% if products %}
+<div class="vending-section">
+    <h2 class="section-title">Product Catalog</h2>
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>ID</th>
+                    <th>UPC</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in products[:50] %}
+                <tr>
+                    <td class="col-name">{{ p.name|default(p.description|default('Product ' ~ p.id|default('?'))) }}</td>
+                    <td>{{ p.id|default('—') }}</td>
+                    <td class="col-muted">{{ p.upc|default('—') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}
