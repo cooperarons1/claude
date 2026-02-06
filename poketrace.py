@@ -41,6 +41,7 @@ def api_request(endpoint, api_key, params=None):
     req = urllib.request.Request(url)
     req.add_header("X-API-Key", api_key)
     req.add_header("Accept", "application/json")
+    req.add_header("User-Agent", "PopCounts/1.0 (Pokemon TCG Pop Report App)")
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
