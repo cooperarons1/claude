@@ -5,6 +5,15 @@
 <div class="hero">
     <h1>Mega Evolution — Phantasmal Flames</h1>
     <p>Track market prices for booster boxes, ETBs, bundles, and more.</p>
+    <div class="source-badge">
+        {% if price_source == 'poketrace_api' %}
+        <span class="source live">Live prices from Poketrace API</span>
+        {% elif has_api_key %}
+        <span class="source fallback">Fallback prices (API didn't return sealed data)</span>
+        {% else %}
+        <span class="source fallback">Estimated prices (no API key)</span>
+        {% endif %}
+    </div>
 </div>
 
 {% if products %}

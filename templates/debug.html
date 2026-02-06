@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}API Debug - Phantasmal Flames{% endblock %}
+
+{% block content %}
+<a href="/" class="back-link">&larr; Back to Products</a>
+<h1>Poketrace API Debug</h1>
+<p class="debug-desc">This page probes the Poketrace API for Phantasmal Flames sealed product data.</p>
+
+{% if error %}
+<div class="alert alert-error">{{ error }}</div>
+{% endif %}
+
+{% if results %}
+{% for endpoint, data in results.items() %}
+<div class="debug-block">
+    <h3 class="debug-endpoint">{{ endpoint }}</h3>
+    <pre class="debug-json">{{ data|tojson(indent=2) }}</pre>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
