@@ -174,7 +174,16 @@ def fetch_all_products(token):
         if best_match:
             pc_id = best_match.get("id")
             product["pc_id"] = pc_id
-            product["pc_url"] = f"https://www.pricecharting.com/game/pokemon-phantasmal-flames/{pc_id}"
+
+            # Build proper PriceCharting URL from console + product slugs
+            console = best_match.get("console-name", "")
+            prod_name = best_match.get("product-name", "")
+            if console and prod_name:
+                console_slug = console.lower().replace(" ", "-")
+                name_slug = prod_name.lower().replace(" ", "-")
+                product["pc_url"] = f"{PC_BASE}/game/{console_slug}/{name_slug}"
+            else:
+                product["pc_url"] = f"{PC_BASE}/offers?product={pc_id}"
 
             # Fetch full pricing
             try:
@@ -231,6 +240,9 @@ def get_products(token=None):
             "type": c["type"],
             "market_price": None,
             "new_price": None,
+            "cib_price": None,
+            "loose_price": None,
+            "graded_price": None,
             "per_pack": 0,
             "price_source": "no_token",
             "pc_id": None,

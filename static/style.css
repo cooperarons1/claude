@@ -232,6 +232,15 @@ a:hover { color: var(--accent-hover); }
     font-size: 0.85rem;
 }
 
+/* ===== Chart ===== */
+.chart-container {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: var(--bg-hover);
+    border-radius: var(--radius-sm);
+    height: 150px;
+}
+
 /* ===== Buttons ===== */
 .product-links {
     display: flex;
