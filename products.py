@@ -121,7 +121,7 @@ def api_request(endpoint, api_key, params=None):
     req.add_header("User-Agent", "PopCounts/1.0 (Pokemon TCG Sealed Product Tracker)")
 
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=8) as resp:
             return json.loads(resp.read().decode())
     except urllib.error.HTTPError as e:
         body = e.read().decode() if e.fp else ""

@@ -19,37 +19,51 @@ def get_api_key():
 
 @app.route("/")
 def home():
-    """Home page - show all Phantasmal Flames products."""
-    api_key = get_api_key()
-    all_products, price_source = products.get_products(api_key)
+    """Home page - show all Phantasmal Flames products (fast, no API calls)."""
+    try:
+        # Load with fallback prices first (instant, no API call)
+        all_products, price_source = products.get_products(api_key=None)
 
-    # Sort: booster box first, then ETBs, bundle, build & battle, pack
-    type_order = {"booster-box": 0, "etb": 1, "bundle": 2, "build-battle": 3, "pack": 4}
-    all_products.sort(key=lambda p: type_order.get(p["type"], 99))
+        type_order = {"booster-box": 0, "etb": 1, "bundle": 2, "build-battle": 3, "pack": 4}
+        all_products.sort(key=lambda p: type_order.get(p["type"], 99))
 
-    # Find best value (lowest per-pack cost)
-    best_id = None
-    if all_products:
-        best = min(all_products, key=lambda p: p["per_pack"])
-        best_id = best["id"]
+        best_id = None
+        if all_products:
+            best = min(all_products, key=lambda p: p["per_pack"])
+            best_id = best["id"]
 
-    return render_template(
-        "home.html",
-        products=all_products,
-        best_id=best_id,
-        price_source=price_source,
-        has_api_key=bool(api_key),
-    )
+        return render_template(
+            "home.html",
+            products=all_products,
+            best_id=best_id,
+            price_source=price_source,
+            has_api_key=bool(get_api_key()),
+        )
+    except Exception as e:
+        return f"Error: {e}", 500
 
 
 @app.route("/product/<product_id>")
 def product_detail(product_id):
     """Detail page for a single product."""
-    api_key = get_api_key()
-    product = products.get_product_by_id(product_id, api_key)
+    product = products.get_product_by_id(product_id, api_key=None)
     if not product:
         return render_template("404.html"), 404
     return render_template("product.html", product=product)
+
+
+@app.route("/api/refresh-prices")
+def refresh_prices():
+    """Fetch live prices from Poketrace API (called via JS)."""
+    api_key = get_api_key()
+    if not api_key:
+        return jsonify({"error": "No API key configured"}), 400
+
+    try:
+        all_products, price_source = products.get_products(api_key)
+        return jsonify({"products": all_products, "price_source": price_source})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/debug")
@@ -59,7 +73,11 @@ def debug_api():
     if not api_key:
         return render_template("debug.html", error="No API key configured", results={})
 
-    results = products.probe_api(api_key)
+    try:
+        results = products.probe_api(api_key)
+    except Exception as e:
+        results = {"error": str(e)}
+
     return render_template("debug.html", error=None, results=results)
 
 
