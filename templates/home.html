@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Pop Counts - Browse Sets{% endblock %}
+{% block title %}Pop Counts - WOTC Sets{% endblock %}
 
 {% block content %}
 <div class="hero">
-    <h1>Pokemon TCG Pop Reports</h1>
-    <p>Browse PSA graded pricing data across every set. Select a set to view its full population report.</p>
+    <h1>WOTC Pokemon Pop Reports</h1>
+    <p>PSA graded pricing data for Wizards of the Coast era sets (1999-2003).</p>
 </div>
 
 <form class="search-bar" method="get" action="/">
@@ -12,14 +12,22 @@
         type="text"
         name="q"
         value="{{ search }}"
-        placeholder="Search sets (e.g. Deoxys, Base Set, Charizard...)"
+        placeholder="Search sets (e.g. Base Set, Jungle, Neo Genesis...)"
         autofocus
     >
+    {% if show_all %}
+    <input type="hidden" name="all" value="1">
+    {% endif %}
     <button type="submit">Search</button>
     {% if search %}
-    <a href="/" class="btn-clear">Clear</a>
+    <a href="/?{% if show_all %}all=1{% endif %}" class="btn-clear">Clear</a>
     {% endif %}
 </form>
+
+<div class="filter-tabs">
+    <a href="/" class="tab {% if not show_all %}active{% endif %}">WOTC Sets</a>
+    <a href="/?all=1" class="tab {% if show_all %}active{% endif %}">All Sets</a>
+</div>
 
 {% if sets %}
 <div class="sets-grid">

@@ -1,18 +1,36 @@
 """
 Poketrace API client module.
 Provides reusable functions for fetching PSA pop report data
-across any Pokémon TCG set.
+across any Pokemon TCG set.
 """
 
 import json
 import os
-import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 
 API_BASE = "https://api.poketrace.com/v1"
+
+# WOTC-era sets (Wizards of the Coast, 1999-2003)
+WOTC_SLUGS = {
+    "base-set", "jungle", "fossil", "base-set-2", "team-rocket",
+    "gym-heroes", "gym-challenge", "neo-genesis", "neo-discovery",
+    "neo-revelation", "neo-destiny", "legendary-collection",
+    "expedition-base-set", "expedition", "aquapolis", "skyridge",
+    "wizards-black-star-promos", "wotc-promo", "bs-promos",
+    "best-of-game",
+}
+
+# Broader matching for WOTC sets by name keywords
+WOTC_NAME_HINTS = [
+    "base set", "jungle", "fossil", "team rocket",
+    "gym heroes", "gym challenge",
+    "neo genesis", "neo discovery", "neo revelation", "neo destiny",
+    "legendary collection", "expedition", "aquapolis", "skyridge",
+    "wizards", "best of game",
+]
 
 
 def load_api_key():
@@ -53,6 +71,19 @@ def api_request(endpoint, api_key, params=None):
         raise RuntimeError(f"Network error on {endpoint}: {e.reason}")
 
 
+def is_wotc_set(s):
+    """Check if a set dict is a WOTC-era set."""
+    slug = s.get("id", s.get("slug", "")).lower()
+    name = s.get("name", "").lower()
+
+    if slug in WOTC_SLUGS:
+        return True
+    for hint in WOTC_NAME_HINTS:
+        if hint in name:
+            return True
+    return False
+
+
 def fetch_all_sets(api_key):
     """Fetch all available card sets."""
     data = api_request("/sets", api_key)
@@ -60,6 +91,12 @@ def fetch_all_sets(api_key):
         return []
     sets = data if isinstance(data, list) else data.get("data", data.get("sets", []))
     return sets
+
+
+def fetch_wotc_sets(api_key):
+    """Fetch only WOTC-era sets."""
+    all_sets = fetch_all_sets(api_key)
+    return [s for s in all_sets if is_wotc_set(s)]
 
 
 def find_set_by_id(api_key, set_id):
@@ -73,34 +110,37 @@ def find_set_by_id(api_key, set_id):
 
 
 def fetch_set_cards(api_key, set_id):
-    """Fetch all cards in a set, handling pagination."""
+    """Fetch all cards in a set, handling cursor-based pagination."""
     all_cards = []
-    page = 1
+    cursor = None
 
     while True:
-        params = {"set": set_id, "limit": 50}
-        if page > 1:
-            params["page"] = page
+        params = {"set": set_id, "limit": 50, "market": "US"}
+        if cursor:
+            params["cursor"] = cursor
 
         data = api_request("/cards", api_key, params)
         if not data:
             break
 
-        cards = data if isinstance(data, list) else data.get("data", data.get("cards", []))
+        # Handle both list and dict responses
+        if isinstance(data, list):
+            cards = data
+            has_more = False
+        else:
+            cards = data.get("data", data.get("cards", []))
+            pagination = data.get("pagination", {})
+            has_more = pagination.get("hasMore", False)
+            cursor = pagination.get("nextCursor")
+
         if not cards:
             break
 
         all_cards.extend(cards)
 
-        total = None
-        if isinstance(data, dict):
-            total = data.get("totalCount", data.get("total"))
-        if total and len(all_cards) >= total:
-            break
-        if len(cards) < 50:
+        if not has_more or not cursor:
             break
 
-        page += 1
         time.sleep(0.5)
 
     return all_cards
@@ -112,32 +152,58 @@ def fetch_card_detail(api_key, card_id):
 
 
 def extract_psa_grades(card_data):
-    """Extract PSA grade pricing from card data."""
+    """Extract PSA grade pricing from card detail data.
+
+    Poketrace API structure:
+      data.prices.ebay.PSA_10.avg  (uppercase PSA_N keys)
+    """
     grades = {}
     if not card_data:
         return grades
 
     detail = card_data.get("data", card_data) if isinstance(card_data, dict) else card_data
+    if not isinstance(detail, dict):
+        return grades
 
-    prices = detail.get("prices", detail.get("graded", {}))
-    if isinstance(prices, dict):
-        psa = prices.get("psa", prices.get("PSA", {}))
-        if isinstance(psa, dict):
-            for grade in range(1, 11):
-                key = str(grade)
-                if key in psa:
-                    val = psa[key]
+    prices = detail.get("prices", {})
+    if not isinstance(prices, dict):
+        return grades
+
+    # Check each marketplace for PSA graded data
+    for market_key in ("ebay", "eBay", "tcgplayer", "TCGPlayer", "cardmarket", "CardMarket"):
+        market_prices = prices.get(market_key, {})
+        if not isinstance(market_prices, dict):
+            continue
+
+        for grade in range(1, 11):
+            if grade in grades:
+                continue  # already found from a higher-priority marketplace
+
+            # Try various key formats: PSA_10, psa_10, PSA 10, psa10
+            for key_fmt in (f"PSA_{grade}", f"psa_{grade}", f"PSA {grade}", f"psa{grade}"):
+                val = market_prices.get(key_fmt)
+                if val is not None:
                     if isinstance(val, dict):
-                        grades[grade] = val.get("price", val.get("value", val.get("marketPrice")))
-                    else:
+                        price = val.get("avg", val.get("price", val.get("value",
+                                val.get("marketPrice", val.get("low")))))
+                        if price is not None:
+                            grades[grade] = price
+                    elif isinstance(val, (int, float)):
                         grades[grade] = val
+                    break
 
-    if not grades and isinstance(detail, dict):
+    # Fallback: check top-level keys like psa10Price, psaTenPrice
+    if not grades:
         for key, val in detail.items():
-            if "psa" in key.lower() and "10" in key:
-                grades[10] = val
-            elif "psa" in key.lower() and "9" in key:
-                grades[9] = val
+            kl = key.lower()
+            for grade in range(1, 11):
+                if f"psa" in kl and str(grade) in kl and grade not in grades:
+                    if isinstance(val, (int, float)):
+                        grades[grade] = val
+                    elif isinstance(val, dict):
+                        p = val.get("avg", val.get("price", val.get("value")))
+                        if p is not None:
+                            grades[grade] = p
 
     return grades
 
@@ -155,17 +221,28 @@ def build_set_report(api_key, set_id):
     for card in cards:
         card_id = card.get("id", card.get("cardId"))
         name = card.get("name", "Unknown")
-        number = card.get("number", card.get("cardNumber", "?"))
-        image = card.get("image", card.get("imageUrl", card.get("images", {}).get("small", "")))
+        number = card.get("cardNumber", card.get("number", card.get("card_number", "?")))
+        image = card.get("image", card.get("imageUrl", ""))
+        if not image and isinstance(card.get("images"), dict):
+            image = card["images"].get("small", card["images"].get("large", ""))
         rarity = card.get("rarity", "")
+        variant = card.get("variant", "")
+        top_price = card.get("topPrice")
+        has_graded = card.get("hasGraded", False)
 
         try:
             sort_num = int(str(number).split("/")[0])
         except (ValueError, IndexError):
             sort_num = 999
 
-        detail = fetch_card_detail(api_key, card_id) if card_id else card
-        psa_grades = extract_psa_grades(detail or card)
+        # Fetch detail for graded pricing
+        psa_grades = {}
+        if card_id:
+            try:
+                detail = fetch_card_detail(api_key, card_id)
+                psa_grades = extract_psa_grades(detail)
+            except RuntimeError:
+                pass
 
         cards_data.append({
             "id": card_id,
@@ -174,6 +251,9 @@ def build_set_report(api_key, set_id):
             "sort_num": sort_num,
             "image": image,
             "rarity": rarity,
+            "variant": variant,
+            "top_price": top_price,
+            "has_graded": has_graded,
             "psa_grades": psa_grades,
         })
 
