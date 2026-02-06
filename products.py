@@ -20,7 +20,7 @@ PC_BASE = "https://www.pricecharting.com"
 PRODUCT_CATALOG = [
     {
         "id": "pf-booster-box",
-        "search": "phantasmal flames booster box",
+        "search": ["phantasmal flames booster box"],
         "name": "Booster Box",
         "description": "36 booster packs of Mega Evolution — Phantasmal Flames.",
         "packs": 36,
@@ -28,7 +28,7 @@ PRODUCT_CATALOG = [
     },
     {
         "id": "pf-etb",
-        "search": "phantasmal flames elite trainer box",
+        "search": ["phantasmal flames elite trainer box"],
         "name": "Elite Trainer Box",
         "description": "Mega Charizard X ETB with 9 booster packs, energy cards, dice, and storage box.",
         "packs": 9,
@@ -36,7 +36,7 @@ PRODUCT_CATALOG = [
     },
     {
         "id": "pf-pc-etb",
-        "search": "phantasmal flames pokemon center elite trainer",
+        "search": ["phantasmal flames pokemon center elite trainer"],
         "name": "Pokemon Center Exclusive ETB",
         "description": "Mega Charizard X exclusive ETB with 11 packs and bonus stamped promo card.",
         "packs": 11,
@@ -44,7 +44,7 @@ PRODUCT_CATALOG = [
     },
     {
         "id": "pf-bundle",
-        "search": "phantasmal flames booster bundle",
+        "search": ["phantasmal flames booster bundle", "phantasmal flames bundle", "mega evolution phantasmal flames bundle"],
         "name": "Booster Bundle",
         "description": "6 booster packs of Mega Evolution — Phantasmal Flames.",
         "packs": 6,
@@ -52,7 +52,7 @@ PRODUCT_CATALOG = [
     },
     {
         "id": "pf-build-battle",
-        "search": "phantasmal flames build and battle",
+        "search": ["phantasmal flames build and battle", "phantasmal flames build battle", "phantasmal flames prerelease"],
         "name": "Build & Battle Box",
         "description": "Pre-release kit with 4 booster packs, 23-card evolution pack, and promo card.",
         "packs": 4,
@@ -60,7 +60,7 @@ PRODUCT_CATALOG = [
     },
     {
         "id": "pf-booster-pack",
-        "search": "phantasmal flames booster pack",
+        "search": ["phantasmal flames booster pack", "phantasmal flames pack", "mega evolution phantasmal flames pack"],
         "name": "Booster Pack",
         "description": "Single booster pack with 10 cards.",
         "packs": 1,
@@ -152,24 +152,30 @@ def fetch_all_products(token):
             "price_source": "not_found",
         }
 
-        # Search PriceCharting for this product
-        try:
-            matches = search_products(token, catalog["search"])
-        except Exception:
-            matches = []
-
-        # Find best match (look for Pokemon console/category)
+        # Search PriceCharting — try multiple search terms
+        search_terms = catalog["search"]
         best_match = None
-        for m in matches:
-            name = (m.get("product-name") or "").lower()
-            console = (m.get("console-name") or "").lower()
-            if "pokemon" in console or "phantasmal" in name:
-                best_match = m
-                break
 
-        # If no Pokemon-specific match, take the first result
-        if not best_match and matches:
-            best_match = matches[0]
+        for query in search_terms:
+            try:
+                matches = search_products(token, query)
+            except Exception:
+                matches = []
+
+            # Find best match (look for Pokemon console/category)
+            for m in matches:
+                name = (m.get("product-name") or "").lower()
+                console = (m.get("console-name") or "").lower()
+                if "pokemon" in console or "phantasmal" in name:
+                    best_match = m
+                    break
+
+            # If no Pokemon-specific match, take the first result
+            if not best_match and matches:
+                best_match = matches[0]
+
+            if best_match:
+                break
 
         if best_match:
             pc_id = best_match.get("id")

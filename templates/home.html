@@ -143,6 +143,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (data.length === 0) return;
 
+        // Adjust chart container height based on number of bars
+        const container = canvas.parentElement;
+        container.style.height = Math.max(60, labels.length * 32 + 20) + 'px';
+
         new Chart(canvas, {
             type: 'bar',
             data: {
@@ -151,10 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     data: data,
                     backgroundColor: colors,
                     borderRadius: 4,
-                    barPercentage: 0.7
+                    barPercentage: 0.65,
+                    categoryPercentage: 0.8
                 }]
             },
             options: {
+                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
@@ -168,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 scales: {
-                    y: {
+                    x: {
                         beginAtZero: true,
                         grid: { color: 'rgba(42, 46, 61, 0.3)' },
                         ticks: {
@@ -176,9 +182,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             font: { size: 10 }
                         }
                     },
-                    x: {
+                    y: {
                         grid: { display: false },
-                        ticks: { font: { size: 10 } }
+                        ticks: { font: { size: 11 } }
                     }
                 }
             }
