@@ -229,12 +229,131 @@ SET_CATALOG = {
         "series": "Scarlet & Violet",
         "products": _std_products("jt", "journey together", "Scarlet & Violet"),
     },
+    # --- Sword & Shield era ---
+    "crown-zenith": {
+        "name": "Crown Zenith",
+        "series": "Sword & Shield",
+        "products": _std_products("cz", "crown zenith", "Sword & Shield"),
+    },
+    "silver-tempest": {
+        "name": "Silver Tempest",
+        "series": "Sword & Shield",
+        "products": _std_products("st", "silver tempest", "Sword & Shield"),
+    },
+    "lost-origin": {
+        "name": "Lost Origin",
+        "series": "Sword & Shield",
+        "products": _std_products("lo", "lost origin", "Sword & Shield"),
+    },
+    "astral-radiance": {
+        "name": "Astral Radiance",
+        "series": "Sword & Shield",
+        "products": _std_products("ar", "astral radiance", "Sword & Shield"),
+    },
+    "brilliant-stars": {
+        "name": "Brilliant Stars",
+        "series": "Sword & Shield",
+        "products": _std_products("bs", "brilliant stars", "Sword & Shield"),
+    },
+    "fusion-strike": {
+        "name": "Fusion Strike",
+        "series": "Sword & Shield",
+        "products": _std_products("fs", "fusion strike", "Sword & Shield"),
+    },
+    "evolving-skies": {
+        "name": "Evolving Skies",
+        "series": "Sword & Shield",
+        "products": _std_products("es", "evolving skies", "Sword & Shield"),
+    },
+    "chilling-reign": {
+        "name": "Chilling Reign",
+        "series": "Sword & Shield",
+        "products": _std_products("cr", "chilling reign", "Sword & Shield"),
+    },
+    "battle-styles": {
+        "name": "Battle Styles",
+        "series": "Sword & Shield",
+        "products": _std_products("bst", "battle styles", "Sword & Shield"),
+    },
+    "vivid-voltage": {
+        "name": "Vivid Voltage",
+        "series": "Sword & Shield",
+        "products": _std_products("vv", "vivid voltage", "Sword & Shield"),
+    },
+    "champions-path": {
+        "name": "Champion's Path",
+        "series": "Sword & Shield",
+        "products": [
+            {
+                "id": "cp-etb",
+                "search": ["pokemon champions path elite trainer box", "champions path elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Champion's Path ETB with 10 booster packs and promo card.",
+                "packs": 10,
+                "type": "etb",
+            },
+            {
+                "id": "cp-booster-pack",
+                "search": ["pokemon champions path booster pack", "champions path booster pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
+    },
+    "shining-fates": {
+        "name": "Shining Fates",
+        "series": "Sword & Shield",
+        "products": [
+            {
+                "id": "sf-etb",
+                "search": ["pokemon shining fates elite trainer box", "shining fates elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Shining Fates ETB with 10 booster packs and promo card.",
+                "packs": 10,
+                "type": "etb",
+            },
+            {
+                "id": "sf-booster-pack",
+                "search": ["pokemon shining fates booster pack", "shining fates booster pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 10 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
+    },
+    "celebrations": {
+        "name": "Celebrations",
+        "series": "Sword & Shield",
+        "products": [
+            {
+                "id": "cel-etb",
+                "search": ["pokemon celebrations elite trainer box", "celebrations elite trainer box"],
+                "name": "Elite Trainer Box",
+                "description": "Celebrations ETB with 10 booster packs and promo card.",
+                "packs": 10,
+                "type": "etb",
+            },
+            {
+                "id": "cel-booster-pack",
+                "search": ["pokemon celebrations booster pack", "celebrations booster pack"],
+                "name": "Booster Pack",
+                "description": "Single booster pack with 4 cards.",
+                "packs": 1,
+                "type": "pack",
+            },
+        ],
+    },
 }
 
 # Ordered list of set slugs for tab display
 SET_ORDER = [
+    # Mega Evolution
     "phantasmal-flames",
     "ascended-heroes",
+    # Scarlet & Violet
     "journey-together",
     "prismatic-evolutions",
     "surging-sparks",
@@ -244,6 +363,20 @@ SET_ORDER = [
     "paldean-fates",
     "151",
     "obsidian-flames",
+    # Sword & Shield
+    "crown-zenith",
+    "silver-tempest",
+    "lost-origin",
+    "astral-radiance",
+    "brilliant-stars",
+    "fusion-strike",
+    "evolving-skies",
+    "chilling-reign",
+    "battle-styles",
+    "vivid-voltage",
+    "champions-path",
+    "shining-fates",
+    "celebrations",
 ]
 
 

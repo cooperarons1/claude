@@ -40,6 +40,22 @@
     </div>
 </div>
 
+<div class="sets-section">
+    <h2 class="section-title">Sword & Shield</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Sword & Shield" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent swsh"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
 <div class="home-features">
     <div class="feature">
         <div class="feature-icon">$</div>

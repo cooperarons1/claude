@@ -147,6 +147,10 @@ a:hover { color: var(--accent-hover); }
     background: linear-gradient(90deg, #ef4444, #f97316);
 }
 
+.set-card-accent.swsh {
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
 .set-card-body {
     padding: 16px 18px;
     display: flex;
