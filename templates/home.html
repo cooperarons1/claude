@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Pop Counts - Browse Sets{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Pokemon TCG Pop Reports</h1>
+    <p>Browse PSA graded pricing data across every set. Select a set to view its full population report.</p>
+</div>
+
+<form class="search-bar" method="get" action="/">
+    <input
+        type="text"
+        name="q"
+        value="{{ search }}"
+        placeholder="Search sets (e.g. Deoxys, Base Set, Charizard...)"
+        autofocus
+    >
+    <button type="submit">Search</button>
+    {% if search %}
+    <a href="/" class="btn-clear">Clear</a>
+    {% endif %}
+</form>
+
+{% if sets %}
+<div class="sets-grid">
+    {% for s in sets %}
+    <a href="/set/{{ s.get('id', s.get('slug', '')) }}" class="set-card">
+        {% if s.get('images', {}).get('logo') or s.get('logo') %}
+        <img
+            src="{{ s.get('images', {}).get('logo', s.get('logo', '')) }}"
+            alt="{{ s.get('name', 'Set') }}"
+            class="set-logo"
+            loading="lazy"
+        >
+        {% endif %}
+        <div class="set-info">
+            <h3>{{ s.get('name', 'Unknown Set') }}</h3>
+            {% if s.get('releaseDate') or s.get('release_date') %}
+            <span class="set-date">{{ s.get('releaseDate', s.get('release_date', '')) }}</span>
+            {% endif %}
+            {% if s.get('total') or s.get('totalCards') %}
+            <span class="set-count">{{ s.get('total', s.get('totalCards', '')) }} cards</span>
+            {% endif %}
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% elif not error %}
+<div class="empty-state">
+    <p>No sets found{% if search %} matching "{{ search }}"{% endif %}.</p>
+</div>
+{% endif %}
+{% endblock %}

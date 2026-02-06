@@ -2,3 +2,8 @@
 psa_pop_deoxys.json
 __pycache__/
 *.pyc
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
