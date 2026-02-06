@@ -4,14 +4,14 @@
 {% block content %}
 <div class="hero">
     <h1>Mega Evolution — Phantasmal Flames</h1>
-    <p>Track market prices for booster boxes, ETBs, bundles, and more.</p>
+    <p>Live sealed product prices from PriceCharting.</p>
     <div class="source-badge">
-        {% if price_source == 'poketrace_api' %}
-        <span class="source live">Live prices from Poketrace API</span>
-        {% elif has_api_key %}
-        <span class="source fallback">Fallback prices (API didn't return sealed data)</span>
+        {% if price_source == 'pricecharting' %}
+        <span class="source live">Live prices from PriceCharting</span>
+        {% elif price_source == 'no_token' %}
+        <span class="source fallback">No API token — add PRICECHARTING_TOKEN to env</span>
         {% else %}
-        <span class="source fallback">Estimated prices (no API key)</span>
+        <span class="source fallback">No pricing data found</span>
         {% endif %}
     </div>
 </div>
@@ -20,35 +20,34 @@
 <div class="products-grid">
     {% for p in products %}
     <div class="product-card {% if p.id == best_id %}best-value{% endif %}">
-        {% if p.id == best_id %}
+        {% if p.id == best_id and p.market_price %}
         <span class="badge badge-value">Best Value</span>
         {% endif %}
-
-        <div class="product-image">
-            <img src="{{ p.image }}" alt="{{ p.name }}" loading="lazy"
-                 onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
-        </div>
 
         <div class="product-body">
             <h2 class="product-name">{{ p.name }}</h2>
             <p class="product-desc">{{ p.description }}</p>
 
             <div class="product-pricing">
+                {% if p.market_price %}
                 <div class="price-main">${{ "%.2f"|format(p.market_price) }}</div>
                 <div class="price-meta">
                     <span class="price-perpk">${{ "%.2f"|format(p.per_pack) }} / pack</span>
                     <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
                 </div>
+                {% else %}
+                <div class="price-main price-na">No price data</div>
+                <div class="price-meta">
+                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
+                </div>
+                {% endif %}
             </div>
 
+            {% if p.pc_url %}
             <div class="product-links">
-                {% if p.pricecharting %}
-                <a href="{{ p.pricecharting }}" target="_blank" class="btn btn-price">Price History</a>
-                {% endif %}
-                {% for name, url in p.retailers.items() %}
-                <a href="{{ url }}" target="_blank" class="btn btn-retailer">{{ name }}</a>
-                {% endfor %}
+                <a href="{{ p.pc_url }}" target="_blank" class="btn btn-price">PriceCharting</a>
             </div>
+            {% endif %}
         </div>
     </div>
     {% endfor %}
@@ -61,13 +60,14 @@
             <thead>
                 <tr>
                     <th>Product</th>
-                    <th>Price</th>
+                    <th>Sealed Price</th>
                     <th>Packs</th>
                     <th>Per Pack</th>
                 </tr>
             </thead>
             <tbody>
                 {% for p in products %}
+                {% if p.market_price %}
                 <tr {% if p.id == best_id %}class="highlight"{% endif %}>
                     <td class="col-name">
                         {{ p.name }}
@@ -77,6 +77,7 @@
                     <td class="col-packs">{{ p.packs }}</td>
                     <td class="col-perpk">${{ "%.2f"|format(p.per_pack) }}</td>
                 </tr>
+                {% endif %}
                 {% endfor %}
             </tbody>
         </table>

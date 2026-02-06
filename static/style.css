@@ -209,6 +209,12 @@ a:hover { color: var(--accent-hover); }
     letter-spacing: -0.02em;
 }
 
+.price-main.price-na {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
 .price-meta {
     display: flex;
     gap: 12px;
