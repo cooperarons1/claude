@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}Live sealed product prices for modern Pokemon TCG sets. Compare booster boxes, ETBs, bundles, and more.{% endblock %}">
+    <title>{% block title %}PokePriceTracker{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav-brand">PokePriceTracker</a>
+        <span class="nav-tagline">Pokemon TCG Sealed Product Prices</span>
+        <div class="nav-links">
+            <a href="/vending" class="nav-link">Vending</a>
+        </div>
+    </nav>
+
+    <main class="container" id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>Prices via PriceCharting. AI powered by Claude Opus 4.6. Not affiliated with The Pokemon Company.</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <button class="chat-fab" id="chatFab" title="Ask Claude" aria-label="Open chat assistant" aria-expanded="false" aria-controls="chatPanel">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+
+    <div class="chat-panel hidden" id="chatPanel" role="dialog" aria-label="Chat with Claude assistant">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <span class="chat-title" id="chatPanelTitle">Claude Opus 4.6</span>
+                <span class="chat-subtitle">Pokemon TCG Assistant</span>
+            </div>
+            <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages">
+            <div class="chat-msg assistant">
+                <div class="chat-bubble">Hey! I'm Claude, your Pokemon TCG pricing assistant. Ask me anything about sealed products, set values, or best deals!</div>
+            </div>
+        </div>
+        <form class="chat-input-area" id="chatForm">
+            <label for="chatInput" class="sr-only">Type your message</label>
+            <input type="text" class="chat-input" id="chatInput" placeholder="Ask about Pokemon TCG prices..." autocomplete="off">
+            <button type="submit" class="chat-send" id="chatSend" aria-label="Send message">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

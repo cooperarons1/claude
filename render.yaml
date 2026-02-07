@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pop-counts
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: POKETRACE_API_KEY
+        sync: false
+      - key: FLASK_DEBUG
+        value: "0"

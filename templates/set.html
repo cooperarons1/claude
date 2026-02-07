@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}{{ set_name }} — PokePriceTracker{% endblock %}
+{% block description %}Live prices for {{ set_name }} ({{ set_series }}) sealed products. Compare booster boxes, ETBs, bundles, and booster packs.{% endblock %}
+
+{% block content %}
+<a href="/" class="back-link">&larr; All Sets</a>
+
+<!-- Set Tabs -->
+<nav class="tabs-wrapper" aria-label="Pokemon TCG sets">
+    <div class="tabs" role="list">
+        {% for s in sets %}
+        <a href="/set/{{ s.slug }}" class="tab {% if s.slug == current_set %}active{% endif %}" role="listitem" {% if s.slug == current_set %}aria-current="page"{% endif %}>
+            <span class="tab-name">{{ s.name }}</span>
+            <span class="tab-series">{{ s.series }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</nav>
+
+<div class="set-header">
+    <h1 class="set-title">{{ set_name }}</h1>
+    <span class="set-series-label">{{ set_series }}</span>
+    {% if price_source == 'pricecharting' %}
+    <span class="source live">Live from PriceCharting</span>
+    {% elif price_source == 'no_token' %}
+    <span class="source fallback">No API token configured</span>
+    {% endif %}
+</div>
+
+{% if products %}
+<div class="products-grid">
+    {% for p in products %}
+    <div class="product-card {% if p.id == best_id %}best-value{% endif %}">
+        {% if p.id == best_id and p.market_price %}
+        <span class="badge badge-value">Best Value</span>
+        {% endif %}
+
+        <div class="product-body">
+            <h3 class="product-name">{{ p.name }}</h3>
+            <p class="product-desc">{{ p.description }}</p>
+
+            <div class="product-pricing">
+                {% if p.market_price %}
+                <div class="price-main">${{ "%.2f"|format(p.market_price) }}</div>
+                <div class="price-meta">
+                    <span class="price-perpk">${{ "%.2f"|format(p.per_pack) }} / pack</span>
+                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
+                </div>
+                {% else %}
+                <div class="price-main price-na">No price data</div>
+                <div class="price-meta">
+                    <span class="price-packs">{{ p.packs }} pack{{ 's' if p.packs != 1 else '' }}</span>
+                </div>
+                {% endif %}
+            </div>
+
+            {% if p.pc_url %}
+            <div class="product-links">
+                <a href="{{ p.pc_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-price">PriceCharting <span class="sr-only">(opens in new tab)</span></a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% set priced_products = products | selectattr('market_price') | list %}
+{% if priced_products %}
+<div class="comparison-section">
+    <h2>Price Comparison</h2>
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Sealed Price</th>
+                    <th>Packs</th>
+                    <th>Per Pack</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in products %}
+                {% if p.market_price %}
+                <tr {% if p.id == best_id %}class="highlight"{% endif %}>
+                    <td class="col-name">
+                        {{ p.name }}
+                        {% if p.id == best_id %}<span class="badge-inline">Best</span>{% endif %}
+                    </td>
+                    <td class="col-price">${{ "%.2f"|format(p.market_price) }}</td>
+                    <td class="col-packs">{{ p.packs }}</td>
+                    <td class="col-perpk">${{ "%.2f"|format(p.per_pack) }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

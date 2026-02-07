@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}PokePriceTracker — Pokemon TCG Sealed Product Prices{% endblock %}
+
+{% block content %}
+<div class="home-hero">
+    <h1>PokePriceTracker</h1>
+    <p class="home-subtitle">Live sealed product prices for modern Pokemon TCG sets</p>
+    <p class="home-desc">Compare booster boxes, ETBs, bundles, and more across every set. Powered by PriceCharting.</p>
+</div>
+
+<div class="sets-section">
+    <h2 class="section-title">Mega Evolution</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Mega Evolution" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="sets-section">
+    <h2 class="section-title">Scarlet & Violet</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Scarlet & Violet" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent sv"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="sets-section">
+    <h2 class="section-title">Sword & Shield</h2>
+    <div class="sets-grid">
+        {% for s in sets if s.series == "Sword & Shield" %}
+        <a href="/set/{{ s.slug }}" class="set-card">
+            <div class="set-card-accent swsh"></div>
+            <div class="set-card-body">
+                <h3 class="set-card-name">{{ s.name }}</h3>
+                <span class="set-card-series">{{ s.series }}</span>
+                <span class="set-card-cta">View Prices &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<section class="home-features" aria-label="Features">
+    <div class="feature">
+        <div class="feature-icon" aria-hidden="true">$</div>
+        <h3>Live Prices</h3>
+        <p>Real-time market data from PriceCharting for sealed Pokemon TCG products.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon" aria-hidden="true">/pk</div>
+        <h3>Per-Pack Value</h3>
+        <p>Instantly see the cost per pack to find the best deal on every set.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon" aria-hidden="true">AI</div>
+        <h3>Claude Assistant</h3>
+        <p>Ask Claude Opus 4.6 anything about Pokemon TCG pricing and products.</p>
+    </div>
+</section>
+{% endblock %}
